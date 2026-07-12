@@ -17,3 +17,4 @@ const userSearch = async (userInput) => {
         console.log(error)
     }
 }
+
