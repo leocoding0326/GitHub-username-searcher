@@ -18,3 +18,4 @@ const userSearch = async (userInput) => {
     }
 }
 
+export default userSearch;
