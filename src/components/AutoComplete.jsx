@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import SearchBar from './SearchBar';
+import SuggestionList from './SuggestionList';
 
 const AutoComplete = ({searchFunction, getLabel}) => {
 
@@ -18,14 +19,15 @@ const AutoComplete = ({searchFunction, getLabel}) => {
     return (
         <div>
             <SearchBar onSearch = {handleChange}/>
-            <ul>
+            <SuggestionList data ={users} dataHandler={getLabel}/>
+            {/*<ul>
                 {users.map((obj, index) =>(
                     <li key={obj.id ?? index}>
                         {getLabel(obj)}
                     </li>
                 )
                 )}
-            </ul>
+            </ul>*/}
         </div>
     );
 };
