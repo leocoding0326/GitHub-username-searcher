@@ -5,7 +5,7 @@ import SuggestionList from './SuggestionList';
 const AutoComplete = ({searchFunction, getLabel}) => {
 
     const [users, setUsers] = useState([]);
-    const [loading, setloading] = useState(false);
+    const [loading, setLoading] = useState(false);
     
     const handleChange = async (e) => {
     const value = e.target.value;
@@ -13,8 +13,20 @@ const AutoComplete = ({searchFunction, getLabel}) => {
             setUsers([]);
             return;
         };
-        const results = await searchFunction(value);
-        setUsers(results)
+
+        setLoading(true)
+
+        try {
+            const results = await searchFunction(value);
+            setUsers(results)
+        }
+        catch(error) {
+            console.log(`Something went wrong ${error}`)
+        }
+        finally {
+            setLoading(false)
+        };
+        
     };
 
     return (
