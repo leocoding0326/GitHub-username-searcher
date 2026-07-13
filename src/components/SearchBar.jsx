@@ -1,6 +1,6 @@
-const SearchBar = ({onChangeHandler}) => {
+const SearchBar = ({onSearch}) => {
     return (<input
-        onChange = {onChangeHandler}
+        onChange = {onSearch}
         name='username'
         type='text'
         placeholder='Enter username...'
