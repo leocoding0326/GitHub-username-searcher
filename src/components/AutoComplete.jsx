@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import SearchBar from './SearchBar';
 
 const AutoComplete = ({searchFunction, getLabel}) => {
     const [users, setUsers] = useState([]);
@@ -13,13 +14,7 @@ const AutoComplete = ({searchFunction, getLabel}) => {
     }
     return (
         <div>
-            <input 
-                onChange={handleChange}
-                name='username'
-                type='text'
-                placeholder='Enter username...'
-                autoComplete='off'
-            />
+            <SearchBar onChangeHandler = {handleChange}/>
             <ul>
                 {users.map((obj, index) =>(
                     <li key={obj.id ?? index}>
