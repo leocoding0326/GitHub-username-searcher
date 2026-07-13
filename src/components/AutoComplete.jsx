@@ -5,6 +5,7 @@ import SuggestionList from './SuggestionList';
 const AutoComplete = ({searchFunction, getLabel}) => {
 
     const [users, setUsers] = useState([]);
+    const [loading, setloading] = useState(false);
     
     const handleChange = async (e) => {
     const value = e.target.value;
