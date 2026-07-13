@@ -2,10 +2,14 @@ import {useState} from 'react';
 
 const AutoComplete = ({searchFunction, getLabel}) => {
     const [users, setUsers] = useState([]);
-    
     const handleChange = async (e) => {
-       const results = await searchFunction(e.target.value);
-       setUsers(results)
+    const value = e.target.value;
+        if(value.trim() === '') {
+            setUsers([])
+            return
+        }
+        const results = await searchFunction(value);
+        setUsers(results)
     }
     return (
         <div>
