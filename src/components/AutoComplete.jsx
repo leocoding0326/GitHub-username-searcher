@@ -20,14 +20,6 @@ const AutoComplete = ({searchFunction, getLabel}) => {
         <div>
             <SearchBar onSearch = {handleChange}/>
             <SuggestionList data ={users} dataHandler={getLabel}/>
-            {/*<ul>
-                {users.map((obj, index) =>(
-                    <li key={obj.id ?? index}>
-                        {getLabel(obj)}
-                    </li>
-                )
-                )}
-            </ul>*/}
         </div>
     );
 };
