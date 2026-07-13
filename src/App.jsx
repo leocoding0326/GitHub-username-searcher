@@ -10,7 +10,7 @@ const App = () => {
         <form action="submit">
         <AutoComplete 
           searchFunction={userSearch}
-          getLabel={(user) => user.username}
+          getLabel={(user) => user.login}
         />
         <input type="button" value="Search" />
       </form>

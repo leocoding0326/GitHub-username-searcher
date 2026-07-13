@@ -11,7 +11,7 @@ const userSearch = async (userInput) => {
             return
         }
         const result = await response.json();
-        console.log(result);
+        return result.items;
 
     } catch (error) {
         console.log(error)
