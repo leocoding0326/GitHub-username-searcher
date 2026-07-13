@@ -8,7 +8,7 @@ const App = () => {
       <h1>Username Checker</h1>
         <form action="submit">
         <input type="text" placeholder='Enter Username'/>
-        <AutoComplete userObject={userSearch}/>
+        <AutoComplete searchFunction={userSearch}/>
         <input type="button" value="Search" />
       </form>
     </div>
