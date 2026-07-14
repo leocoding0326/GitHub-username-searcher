@@ -1,12 +1,10 @@
-import React from 'react';
-import Lottie from 'lottie-react';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react'; 
 import loadingAnimation from './assets/loading.json'
 
-console.log(Lottie)
 const LoadingBar = () => {
     return (
         <div>
-            <Lottie animationData={loadingAnimation}/>
+            <DotLottieReact data={loadingAnimation} loop autoplay/>
         </div>
     );
 };
