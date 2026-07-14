@@ -1,10 +1,12 @@
+import React from 'react';
 import Lottie from 'lottie-react';
 import loadingAnimation from './assets/loading.json'
 
-const LoadingBar = ({size}) => {
+console.log(Lottie)
+const LoadingBar = () => {
     return (
         <div>
-            <Lottie animationData={loadingAnimation} size={size}/>
+            <Lottie animationData={loadingAnimation}/>
         </div>
     );
 };
