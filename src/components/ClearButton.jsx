@@ -1,7 +1,7 @@
 
-const ClearButton = ({isValid}) => {
+const ClearButton = ({value}) => {
     
-    if (isValid.trim() === '') {
+    if (value.trim() === '') {
         return
     }
     return <button>Clear</button>

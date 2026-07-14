@@ -3,7 +3,7 @@ import SearchBar from './SearchBar';
 import SuggestionList from './SuggestionList';
 import debounce from "lodash.debounce";
 
-const AutoComplete = ({searchFunction, getLabel}) => {
+const SearchAutoComplete = ({searchFunction, getLabel}) => {
 
     const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -57,4 +57,4 @@ const AutoComplete = ({searchFunction, getLabel}) => {
     );
 };
 
-export default AutoComplete;
+export default SearchAutoComplete;
