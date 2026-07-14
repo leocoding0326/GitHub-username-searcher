@@ -32,7 +32,10 @@ const AutoComplete = ({searchFunction, getLabel}) => {
     return (
         <div>
             <SearchBar onSearch = {handleChange}/>
-            <SuggestionList data ={users} dataHandler={getLabel}/>
+            <SuggestionList 
+                data ={users} 
+                dataHandler={getLabel} 
+                isLoading={loading}/>
         </div>
     );
 };
