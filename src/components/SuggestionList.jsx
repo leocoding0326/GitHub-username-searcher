@@ -1,11 +1,14 @@
-const SuggestionList = ({data, dataHandler}) => {
+import LoadingBar from './LoadingBar'
+
+const SuggestionList = ({data, dataHandler, isLoading}) => {
     return (
-        <ul>
-            {data.map((item, index) => 
-                <li key={item.id ?? index}>{dataHandler(item)}</li>
-            )}
-        </ul>
+            isLoading ? <LoadingBar/> : 
+            <ul>
+                {data.map((item, index) => 
+                    <li key={item.id ?? index}>{dataHandler(item)}</li>
+                )}
+            </ul>
     );
-}
+};
 
 export default SuggestionList;
