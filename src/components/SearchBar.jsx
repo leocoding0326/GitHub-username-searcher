@@ -10,7 +10,7 @@ const SearchBar = ({onSearch, search, handleClear}) => {
                 placeholder='Enter username...'
                 autoComplete='off'
                 value={search}/>
-            <ClearButton value = {search} handleClick = {handleClear}/>
+            <ClearButton value = {search} handleClear = {handleClear}/>
         </div>);
 };
 

@@ -1,10 +1,10 @@
 
-const ClearButton = ({value, handleClick}) => {
+const ClearButton = ({value, handleClear}) => {
     
     if (value.trim() === '') {
         return
     }
-    return <button onClick={handleClick}>Clear</button>
+    return <button onClick={handleClear}>Clear</button>
 };
 
 export default ClearButton;
