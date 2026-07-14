@@ -2,8 +2,6 @@ import LoadingBar from './LoadingBar'
 
 const SuggestionList = ({data, dataHandler, isLoading, handleClick}) => {
 
-    
-
     return (
             isLoading ? <LoadingBar /> : 
             <ul>
