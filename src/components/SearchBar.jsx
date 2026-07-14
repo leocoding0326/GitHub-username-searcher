@@ -1,6 +1,6 @@
 import ClearButton from "./ClearButton";
 
-const SearchBar = ({onSearch, search}) => {
+const SearchBar = ({onSearch, search, handleClear}) => {
     return (
         <div>
             <input
@@ -10,7 +10,7 @@ const SearchBar = ({onSearch, search}) => {
                 placeholder='Enter username...'
                 autoComplete='off'
                 value={search}/>
-            <ClearButton value = {search}/>
+            <ClearButton value = {search} handleClick = {handleClear}/>
         </div>);
 };
 

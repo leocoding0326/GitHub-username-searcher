@@ -45,9 +45,18 @@ const SearchAutoComplete = ({searchFunction, getLabel}) => {
         setSearch(getLabel(item));
     };
 
+    const handleClearClick = () => {
+        setUsers([]);
+        setSearch('');
+    }
+
     return (
         <div>
-            <SearchBar onSearch = {handleChange} search={search}/>
+            <SearchBar 
+                onSearch = {handleChange} 
+                search={search} 
+                handleClear = {handleClearClick}/>
+
             <SuggestionList 
                 data ={users} 
                 dataHandler={getLabel} 
