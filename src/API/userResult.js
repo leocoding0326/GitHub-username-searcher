@@ -1,4 +1,4 @@
-const userSearch = async (inputSubmitted) => {
+const userResult = async (inputSubmitted) => {
     const baseUrl = 'https://api.github.com';
     const endPoint = `/users/${inputSubmitted}`;
     const urlToFecth = baseUrl + endPoint;
@@ -14,4 +14,4 @@ const userSearch = async (inputSubmitted) => {
     }
 }
 
-export default userSearch;
+export default userResult;

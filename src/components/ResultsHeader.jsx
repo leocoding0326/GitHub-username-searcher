@@ -1,8 +1,10 @@
-ResultsHeader = ({imgSrc, username}) => {
+const ResultsHeader = ({imgSrc, username}) => {
     return (
         <div>
             <img src={imgSrc}/>
             <h2>{username}</h2>
         </div>
-    )
-}
+    );
+};
+
+export default ResultsHeader;
