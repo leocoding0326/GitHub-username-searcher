@@ -8,11 +8,10 @@ const App = () => {
     <div>
       <h1>Username Checker</h1>
         <form action="submit">
-        <SearchAutoComplete 
-          searchFunction={userSearch}
-          getLabel={(user) => user.login}
-        />
-        <input type="button" value="Search" />
+          <SearchAutoComplete 
+            searchFunction={userSearch}
+            getLabel={(user) => user.login}
+          />
       </form>
     </div>
   );
