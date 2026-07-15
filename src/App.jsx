@@ -20,7 +20,7 @@ const App = () => {
   return (
     <div>
       <h1>Username Checker</h1>
-        <form action="submit">
+        <form onSubmit={handleOnSearch}>
           <SearchAutoComplete 
             searchFunction={userSearch}
             getLabel={(user) => user.login}
