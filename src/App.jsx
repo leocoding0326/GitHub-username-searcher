@@ -24,6 +24,7 @@ const App = () => {
           <SearchAutoComplete 
             searchFunction={userSearch}
             getLabel={(user) => user.login}
+            clearResult={onClear}
           />
         </form>
         <div className='result'>
