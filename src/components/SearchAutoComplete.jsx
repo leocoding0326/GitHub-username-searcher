@@ -41,6 +41,7 @@ const SearchAutoComplete = ({searchFunction, getLabel}) => {
         debouncedSearch(value);
     };
 
+    
     const handleSuggestionClick = (item) => {
         setSearch(getLabel(item));
     };
