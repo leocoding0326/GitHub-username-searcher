@@ -7,8 +7,16 @@ import userResult from './api/userResult.js';
 
 const App = () => {
 
-  const [hasSearch, setSearch] = useState(false)
-  
+  const [getResults, setResults] = useState(false)
+
+  const handleOnSearch = () => {
+    setResults(true);
+  }
+
+  const onClear = () => {
+    setResults(false)
+  }
+
   return (
     <div>
       <h1>Username Checker</h1>
@@ -21,6 +29,7 @@ const App = () => {
         <div className='result'>
             <Results 
               resultObject = {userResult}
+              searchStatus = {hasSearch}
             />
         </div>
     </div>
