@@ -27,12 +27,13 @@ const App = () => {
             clearResult={onClear}
           />
         </form>
-        <div className='result'>
-            <Results 
-              resultObject = {userResult}
-              searchStatus = {hasSearch}
-            />
-        </div>
+        {getResults &&
+          <div className='result'>
+              <Results 
+                resultObject = {userResult}
+              />
+          </div>
+        }
     </div>
   );
 }

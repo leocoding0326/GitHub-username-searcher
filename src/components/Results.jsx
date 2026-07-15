@@ -1,8 +1,6 @@
 import ResultsHeader from "./ResultsHeader";
 
 const Results = () => {
-
-
     return (
         <div>
             <ResultsHeader />
