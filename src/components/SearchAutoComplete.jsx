@@ -1,4 +1,4 @@
-import {useState, useMemo} from 'react';
+import {useState, useMemo, useEffect} from 'react';
 import SearchBar from './SearchBar';
 import SuggestionList from './SuggestionList';
 import debounce from "lodash.debounce";
@@ -29,6 +29,13 @@ const SearchAutoComplete = ({searchFunction, getLabel}) => {
             }, 600),
             [searchFunction]
     );
+
+    useEffect(() => {
+        return () => {
+            debouncedSearch.cancel();
+        };
+    }, [debouncedSearch]);
+
     const handleChange = (e) => {
     const value = e.target.value;
     setSearch(value)

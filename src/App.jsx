@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import userSearch from './API/userSearch.js';
+import userSearch from './api/userSearch.js';
 import SearchAutoComplete from './components/SearchAutoComplete.jsx';
 
 const App = () => {

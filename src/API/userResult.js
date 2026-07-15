@@ -1,0 +1,3 @@
+const userSearch = async (inputSubmitted) => {
+    
+}
