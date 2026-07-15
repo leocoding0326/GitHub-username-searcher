@@ -1,3 +1,12 @@
-const SearchButton = ({type}) => {
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
+const SearchButton = () => {
+    return  (
+        <button type='submit'>
+            <FontAwesomeIcon icon={faMagnifyingGlass} />
+        </button>
+    )
 };
+
+export default SearchButton;
