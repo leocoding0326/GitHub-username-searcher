@@ -6,6 +6,9 @@ import Results from './components/Results.jsx';
 import userResult from './api/userResult.js';
 
 const App = () => {
+
+  const [hasSearch, setSearch] = useState(false)
+  
   return (
     <div>
       <h1>Username Checker</h1>
@@ -17,7 +20,7 @@ const App = () => {
         </form>
         <div className='result'>
             <Results 
-              resultObject = 
+              resultObject = {userResult}
             />
         </div>
     </div>
