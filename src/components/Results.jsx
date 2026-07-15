@@ -1,9 +1,9 @@
 import ResultsHeader from "./ResultsHeader";
 
-const Results = () => {
+const Results = (userResult) => {
     return (
         <div>
-            <ResultsHeader />
+            <ResultsHeader imgSrc={userResult.avatar_url} username={login}/>
         </div>
     );
 };
