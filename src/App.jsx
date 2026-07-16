@@ -9,17 +9,20 @@ const App = () => {
 
   const [getResults, setResults] = useState(false)
   const [search, setSearch] = useState('')
+  const [resultObject, setResultObject] = useState({})
 
   const handleOnSearch = async (e) => {
     e.preventDefault()
     setResults(true);
-    console.log('here')
+    const result = await userResult(search)
+    setResultObject(result)
   }
 
   const onClear = () => {
     setResults(false)
   }
-  console.log(getResults)
+  console.log(resultObject)
+  
   return (
     <div>
       <h1>Username Checker</h1>
@@ -35,7 +38,7 @@ const App = () => {
         {getResults &&
           <div>
               <Results 
-                resultObject = {userResult}
+                resultObject = {resultObject}
               />
           </div>
         }
