@@ -15,7 +15,7 @@ const App = () => {
     e.preventDefault()
 
     const result = await userResult(search)
-    
+
     setResultObject(result)
     setResults(true);
   }
@@ -23,7 +23,6 @@ const App = () => {
   const onClear = () => {
     setResults(false)
   }
-  console.log(resultObject)
   
   return (
     <div>
