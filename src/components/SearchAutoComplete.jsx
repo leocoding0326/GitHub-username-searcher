@@ -3,7 +3,7 @@ import SearchBar from './SearchBar';
 import SuggestionList from './SuggestionList';
 import debounce from "lodash.debounce";
 
-const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setSearch}) => {
+const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setSearch, startSearch}) => {
 
     const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -52,6 +52,7 @@ const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setS
     const handleSuggestionClick = (item) => {
         setSearch(getLabel(item));
         inputRef.current?.focus();
+        setUsers([]);
     };
 
     const handleClearClick = () => {

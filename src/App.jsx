@@ -34,6 +34,7 @@ const App = () => {
             clearResult={onClear}
             search={search}
             setSearch={setSearch}
+            startSearch = {handleOnSearch}
           />
         </form>
         {getResults && resultObject &&
