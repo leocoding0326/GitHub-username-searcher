@@ -3,10 +3,10 @@ import SearchBar from './SearchBar';
 import SuggestionList from './SuggestionList';
 import debounce from "lodash.debounce";
 
-const SearchAutoComplete = ({searchFunction, getLabel, clearResult, users, setUsers}) => {
+const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setSearch}) => {
 
+    const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(false);
-    const [search, setSearch] = useState('')
     
     const debouncedSearch = useMemo(
         () => 
@@ -55,7 +55,7 @@ const SearchAutoComplete = ({searchFunction, getLabel, clearResult, users, setUs
     const handleClearClick = () => {
         setUsers([]);
         setSearch('');
-        clearResult();
+        clearResult()
     }
 
     return (

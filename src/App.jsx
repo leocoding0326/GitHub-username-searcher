@@ -8,11 +8,12 @@ import userResult from './api/userResult.js';
 const App = () => {
 
   const [getResults, setResults] = useState(false)
-  const [users, setUsers] = useState([]);
+  const [search, setSearch] = useState('')
 
   const handleOnSearch = async (e) => {
     e.preventDefault()
     setResults(true);
+    console.log('here')
   }
 
   const onClear = () => {
@@ -27,8 +28,8 @@ const App = () => {
             searchFunction={userSearch}
             getLabel={(user) => user.login}
             clearResult={onClear}
-            users = {users}
-            setUsers ={setUsers}
+            search={search}
+            setSearch={setSearch}
           />
         </form>
         {getResults &&
