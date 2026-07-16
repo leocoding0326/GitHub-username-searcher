@@ -1,18 +1,22 @@
-const Stats = ({resultObject}) => {
+import StatsCard from "./StatsCard";
+
+const ResultStats = ({resultObject}) => {
     const stats = [
         {title: 'Followers', value: resultObject.followers},
         {title: 'Following', value: resultObject.following},
-        {title: 'Repos', value: resultObject.public_repos}
+        {title: 'Repos', value: resultObject.public_repos},
     ];
     return (
         <div>
-            {stats.map((stat => {
+            {stats.map((stat, index) => (
                 <StatsCard 
-                    key={1}
+                    key={stat.id ?? index}
                     title={stat.title}
                     value = {stat.value}
                 /> 
-            }))}
+            ))}
         </div>
     );
-}
+};
+
+export default ResultStats;
