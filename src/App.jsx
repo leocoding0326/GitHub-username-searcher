@@ -8,15 +8,17 @@ import userResult from './api/userResult.js';
 const App = () => {
 
   const [getResults, setResults] = useState(false)
+  const [users, setUsers] = useState([]);
 
-  const handleOnSearch = () => {
+  const handleOnSearch = async (e) => {
+    e.preventDefault()
     setResults(true);
   }
 
   const onClear = () => {
     setResults(false)
   }
-
+  console.log(getResults)
   return (
     <div>
       <h1>Username Checker</h1>
@@ -25,10 +27,12 @@ const App = () => {
             searchFunction={userSearch}
             getLabel={(user) => user.login}
             clearResult={onClear}
+            users = {users}
+            setUsers ={setUsers}
           />
         </form>
         {getResults &&
-          <div className='result'>
+          <div>
               <Results 
                 resultObject = {userResult}
               />

@@ -1,6 +1,6 @@
 import LoadingBar from './LoadingBar'
 
-const SuggestionList = ({data, dataHandler, isLoading, handleClick}) => {
+const SuggestionList = ({data=[], dataHandler, isLoading, handleClick}) => {
 
     return (
             isLoading ? <LoadingBar /> : 

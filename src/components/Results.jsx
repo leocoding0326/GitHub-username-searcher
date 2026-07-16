@@ -1,9 +1,10 @@
 import ResultsHeader from "./ResultsHeader";
 
-const Results = (userResult) => {
+const Results = ({resultObject}) => {
+    console.log(resultObject)
     return (
         <div>
-            <ResultsHeader imgSrc={userResult.avatar_url} username={login}/>
+            <ResultsHeader imgSrc={resultObject.avatar_url} username={resultObject.login}/>
         </div>
     );
 };
