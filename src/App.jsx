@@ -9,13 +9,15 @@ const App = () => {
 
   const [getResults, setResults] = useState(false)
   const [search, setSearch] = useState('')
-  const [resultObject, setResultObject] = useState({})
+  const [resultObject, setResultObject] = useState(null)
 
   const handleOnSearch = async (e) => {
     e.preventDefault()
-    setResults(true);
+
     const result = await userResult(search)
+    
     setResultObject(result)
+    setResults(true);
   }
 
   const onClear = () => {
@@ -35,7 +37,7 @@ const App = () => {
             setSearch={setSearch}
           />
         </form>
-        {getResults &&
+        {getResults && resultObject &&
           <div>
               <Results 
                 resultObject = {resultObject}
