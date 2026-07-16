@@ -7,6 +7,7 @@ const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setS
 
     const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [selectUser, setSelectUser] = useState(null)
     const inputRef = useRef(null)
     
     const debouncedSearch = useMemo(
@@ -36,29 +37,32 @@ const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setS
 
     const handleChange = (e) => {
     const value = e.target.value;
-    setSearch(value)
-    setLoading(true);
-
+    setSelectUser(null);
+    setSearch(value);
         if(value.trim() === '') {
             debouncedSearch.cancel();
             setUsers([]);
+            setLoading(false);
+            setSelectUser(null)
             return;
         };
         debouncedSearch(value);
+        setLoading(true);
     };
 
     
     const handleSuggestionClick = (item) => {
         setSearch(getLabel(item));
         inputRef.current?.focus();
+        setSelectUser(item)
         setUsers([]);
-
     };
 
     const handleClearClick = () => {
         setUsers([]);
         setSearch('');
-        clearResult()
+        clearResult();
+        setSelectUser(null);
     }
 
     return (
@@ -74,7 +78,9 @@ const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setS
                 dataHandler={getLabel} 
                 isLoading={loading}
                 handleClick={handleSuggestionClick}
-                search={search}/>
+                search={search}
+                selectUser={selectUser}/>
+                
         </div>
     );
 };
