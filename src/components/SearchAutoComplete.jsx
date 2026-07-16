@@ -13,8 +13,6 @@ const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setS
         () => 
             debounce(async (value) => {
 
-                setLoading(true);
-
                 try {
                     const results = await searchFunction(value);
                     setUsers(results)
@@ -39,6 +37,7 @@ const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setS
     const handleChange = (e) => {
     const value = e.target.value;
     setSearch(value)
+    setLoading(true);
 
         if(value.trim() === '') {
             debouncedSearch.cancel();
@@ -53,6 +52,7 @@ const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setS
         setSearch(getLabel(item));
         inputRef.current?.focus();
         setUsers([]);
+
     };
 
     const handleClearClick = () => {
@@ -73,7 +73,8 @@ const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setS
                 data ={users} 
                 dataHandler={getLabel} 
                 isLoading={loading}
-                handleClick={handleSuggestionClick}/>
+                handleClick={handleSuggestionClick}
+                search={search}/>
         </div>
     );
 };
