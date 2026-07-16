@@ -4,7 +4,8 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 const SearchButton = () => {
     return  (
         <button type='submit'>
-            <FontAwesomeIcon icon={faMagnifyingGlass} />
+            <FontAwesomeIcon icon={faMagnifyingGlass}/>
+            Search
         </button>
     )
 };

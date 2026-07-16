@@ -1,4 +1,4 @@
-import {useState, useMemo, useEffect} from 'react';
+import {useState, useMemo, useEffect, useRef} from 'react';
 import SearchBar from './SearchBar';
 import SuggestionList from './SuggestionList';
 import debounce from "lodash.debounce";
@@ -7,6 +7,7 @@ const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setS
 
     const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(false);
+    const inputRef = useRef(null)
     
     const debouncedSearch = useMemo(
         () => 
@@ -50,6 +51,7 @@ const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setS
     
     const handleSuggestionClick = (item) => {
         setSearch(getLabel(item));
+        inputRef.current?.focus();
     };
 
     const handleClearClick = () => {
@@ -63,7 +65,8 @@ const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setS
             <SearchBar 
                 onSearch = {handleChange} 
                 search={search} 
-                handleClear = {handleClearClick}/>
+                handleClear = {handleClearClick}
+                inputRef={inputRef}/>
 
             <SuggestionList 
                 data ={users} 
