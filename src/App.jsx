@@ -13,6 +13,10 @@ const App = () => {
 
   const handleOnSearch = async (e) => {
     e.preventDefault()
+    
+    if(search.trim() === '') {
+      return 
+    }
 
     const result = await userResult(search)
 
