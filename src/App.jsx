@@ -3,6 +3,7 @@ import userSearch from './api/userSearch.js';
 import SearchAutoComplete from './components/SearchAutoComplete.jsx';
 import Results from './components/Results.jsx';
 import userResult from './api/userResult.js';
+import NavBar from './components/NavBar/NavBar.jsx';
 
 const App = () => {
 
@@ -27,7 +28,7 @@ const App = () => {
     setResults(false)
   }
   
-  return (
+  {/*return (
     <div>
       <h1>Username Checker</h1>
         <form onSubmit={handleOnSearch}>
@@ -49,6 +50,7 @@ const App = () => {
         }
     </div>
   );
-}
+*/}
+} 
 
 export default App
