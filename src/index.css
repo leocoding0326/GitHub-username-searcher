@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "@fontsource-variable/google-sans-code";
+@import "@fontsource-variable/stack-sans-notch";
 
 @theme {
 --color-digital-blue-50: oklch(95.13% 0.023 256.10);
@@ -12,4 +14,9 @@
 --color-digital-blue-800: oklch(29.89% 0.116 259.04);
 --color-digital-blue-900: oklch(19.67% 0.068 256.39);
 --color-digital-blue-950: oklch(16.49% 0.052 253.90);
+}
+
+@theme {
+  --font-code:'Google Sans Code', monospace;
+  --font-notch: 'Stack Sans Notch', monospace;
 }
