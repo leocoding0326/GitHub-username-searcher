@@ -4,7 +4,7 @@ import logo from "../../assets/logo.svg";
 
 const NavBar = () => {
     return (
-        <div className="w-full h-14 mx-2">
+        <div className="w-full h-14 mx-4 my-2">
             <Logo imgSrc = {logo} altText="github finder logo"/>
             <NavLinks />
         </div>
