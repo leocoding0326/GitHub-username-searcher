@@ -27,6 +27,10 @@ const App = () => {
   const onClear = () => {
     setResults(false)
   }
+
+  return (
+    <NavBar />
+  )
   
   {/*return (
     <div>
