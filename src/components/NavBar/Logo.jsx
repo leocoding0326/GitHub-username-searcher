@@ -1,7 +1,7 @@
 const Logo = ({imgSrc, altText}) => {
     return (
-        <div>
-            <img src={imgSrc} alt= {altText}/>
+        <div className="max-w-full h-full flex ">
+            <img src={imgSrc} alt= {altText} className="h-10 w-auto"/>
             <h1>GitHub Finder</h1>
         </div>
     )
