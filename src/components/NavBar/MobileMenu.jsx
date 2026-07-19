@@ -3,9 +3,9 @@ import SlideMenu from "./SlideMenu";
 
 const MobileMenu = ({showMenu, open}) => {
     return (
-        <div>
+        <div className="md:hidden">
             <BurgerButton showMenu={showMenu} open={open}/>
-            <SlideMenu />
+            <SlideMenu open={open}/>
         </div>
     )
 };

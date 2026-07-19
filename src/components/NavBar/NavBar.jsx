@@ -20,7 +20,7 @@ const NavBar = () => {
                 <NavAuth />
             </div>
                 <MobileMenu showMenu={handleToggle} open ={open}/>
-            </div>
+        </div>
     );
 };
 

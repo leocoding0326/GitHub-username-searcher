@@ -1,7 +1,8 @@
 
-const SlideMenu = () => {
+const SlideMenu = ({open}) => {
     return (
-        <div className={`translate-x-full right-0 top-0 fixed h-screen w-[60vw] border bg-amber-200`}>
+        <div className={`transition-all duration-300 right-0 top-0 fixed h-[90vh] w-screen rounded-md shadow-sm ${!open ? 'translate-x-full' : 'translate-x-0'
+        }`}>
             
         </div>
     )
