@@ -13,9 +13,9 @@ const NavBar = () => {
     }
     
     return (
-        <div className="max-w-[1440px] h-14 px-8 my-2 flex justify-between m-auto gap-2">
+        <div className="max-w-[1440px] h-14 px-8 flex mx-auto justify-between gap-2 items-center">
             <Logo imgSrc = {logo} altText="github finder logo"/>
-            <div className="hidden md:flex ml-auto gap-4 flex-wrap-reverse">
+            <div className="hidden md:flex gap-4">
                 <NavLinks />
                 <NavAuth />
             </div>
