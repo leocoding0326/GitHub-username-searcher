@@ -3,7 +3,7 @@ import NavAuth from "./NavAuth";
 
 const SlideMenu = ({open}) => {
     return (
-        <div className={`flex flex-col justify-around items-center transition-all duration-300 right-0 top-0 fixed h-[90vh] w-screen rounded-md shadow-sm ${!open ? 'translate-x-full' : 'translate-x-0'
+        <div className={`flex flex-col justify-around items-center transition-all duration-300 right-0 top-0 fixed h-[80vh] w-screen p-4 rounded-md shadow-sm ${!open ? 'translate-x-full' : 'translate-x-0'
         }`}>
           <NavLinks />
           <NavAuth />
