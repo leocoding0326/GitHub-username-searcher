@@ -2,6 +2,7 @@ import Logo from "./Logo";
 import NavLinks from "./NavLinks";
 import NavAuth from "./NavAuth";
 import logo from "../../assets/logo.svg";
+import BurgerMenu from "./BurgerMenu";
 
 const NavBar = () => {
     return (
@@ -10,6 +11,9 @@ const NavBar = () => {
             <div className="hidden md:flex ml-auto gap-4 flex-wrap-reverse">
                 <NavLinks />
                 <NavAuth />
+            </div>
+            <div>
+                <BurgerMenu />
             </div>
         </div>
     )
