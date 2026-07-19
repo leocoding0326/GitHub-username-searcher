@@ -5,10 +5,12 @@ import logo from "../../assets/logo.svg";
 
 const NavBar = () => {
     return (
-        <div className="w-full h-14 mx-4 my-2">
+        <div className="max-w-7xl h-14 px-6 my-2 flex justify-between m-auto">
             <Logo imgSrc = {logo} altText="github finder logo"/>
-            <NavLinks />
-            <NavAuth />
+            <div className="hidden md:flex ml-auto gap-4 flex-wrap-reverse">
+                <NavLinks />
+                <NavAuth />
+            </div>
         </div>
     )
 };

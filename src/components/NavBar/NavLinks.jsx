@@ -10,6 +10,7 @@ const NavLinks = () => {
         [&>li>a]:transition-colors
         [&>li>a]:duration-500
         [&>li>a]:inline-block
+        text-sm
         ">
             <li><a href="">Tools</a></li>
             <li><a href="">Why</a></li>
