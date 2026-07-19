@@ -1,5 +1,6 @@
 import Logo from "./Logo";
 import NavLinks from "./NavLinks";
+import NavAuth from "./NavAuth";
 import logo from "../../assets/logo.svg";
 
 const NavBar = () => {
@@ -7,6 +8,7 @@ const NavBar = () => {
         <div className="w-full h-14 mx-4 my-2">
             <Logo imgSrc = {logo} altText="github finder logo"/>
             <NavLinks />
+            <NavAuth />
         </div>
     )
 };
