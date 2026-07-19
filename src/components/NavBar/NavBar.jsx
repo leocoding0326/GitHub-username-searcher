@@ -10,7 +10,7 @@ const NavBar = () => {
 
     const handleToggle = () => {
       setOpen(prev => !prev);
-    }
+    };
     
     return (
         <div className="max-w-[1440px] h-14 px-6 flex mx-auto justify-between gap-2 items-center">
@@ -24,7 +24,7 @@ const NavBar = () => {
             </div>
 
         </div>
-    )
+    );
 };
 
 

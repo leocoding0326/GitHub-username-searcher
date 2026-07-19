@@ -18,15 +18,14 @@ const App = () => {
       return 
     }
 
-    const result = await userResult(search)
-
-    setResultObject(result)
+    const result = await userResult(search);
+    setResultObject(result);
     setResults(true);
-  }
+  };
 
   const onClear = () => {
-    setResults(false)
-  }
+    setResults(false);
+  };
 
   return (
     <NavBar />
@@ -57,4 +56,4 @@ const App = () => {
 */}
 } 
 
-export default App
+export default App;
