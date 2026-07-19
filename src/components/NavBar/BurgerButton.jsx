@@ -1,10 +1,10 @@
-const BurgerMenu = ({helperFunction, open}) => {
+const BurgerButton = ({showMenu, open}) => {
     
 
   return (
       <button
-        onClick={helperFunction}
-        className="relative w-6 h-4 flex items-center justify-center"
+        onClick={showMenu}
+        className="relative w-6 h-4 flex items-center justify-center z-10"
         aria-label="slide menu button"
       >
           <span
@@ -24,4 +24,4 @@ const BurgerMenu = ({helperFunction, open}) => {
       </button>
   );
 };
-export default BurgerMenu;
+export default BurgerButton;

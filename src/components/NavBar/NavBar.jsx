@@ -3,7 +3,7 @@ import Logo from "./Logo";
 import NavLinks from "./NavLinks";
 import NavAuth from "./NavAuth";
 import logo from "../../assets/logo.svg";
-import BurgerMenu from "./BurgerButton";
+import MobileMenu from "./MobileMenu";
 
 const NavBar = () => {
     const [open, setOpen] = useState(false);
@@ -19,11 +19,8 @@ const NavBar = () => {
                 <NavLinks />
                 <NavAuth />
             </div>
-            <div className="md:hidden flex items-center">
-                <BurgerMenu helperFunction={handleToggle} open ={open}/>
+                <MobileMenu showMenu={handleToggle} open ={open}/>
             </div>
-
-        </div>
     );
 };
 
