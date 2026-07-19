@@ -4,8 +4,9 @@ const BurgerMenu = ({helperFunction, open}) => {
 return (
   <button
     onClick={helperFunction}
+    className="relative w-6 h-4 flex items-center justify-center"
+    aria-label="slide menu button"
   >
-    <div className="relative w-6 h-4 flex items-center justify-center">
       <span
         className={`absolute block left-0 h-0.5 w-6 rounded-full bg-black transition-all duration-300
         ${open ? "top-2 rotate-45" : "top-0"}`}
@@ -20,7 +21,6 @@ return (
         className={`absolute block left-0 h-0.5 w-6 rounded-full bg-black transition-all duration-300
         ${open ? "top-2 -rotate-45" : "top-4"}`}
       />
-    </div>
   </button>
 );
 }
