@@ -6,13 +6,13 @@ import BurgerMenu from "./BurgerMenu";
 
 const NavBar = () => {
     return (
-        <div className="max-w-7xl h-14 px-6 my-2 flex justify-between m-auto">
+        <div className="max-w-7xl h-14 md:px-6 px-3 my-2 flex justify-between m-auto gap-2">
             <Logo imgSrc = {logo} altText="github finder logo"/>
             <div className="hidden md:flex ml-auto gap-4 flex-wrap-reverse">
                 <NavLinks />
                 <NavAuth />
             </div>
-            <div>
+            <div className="md:hidden flex items-center">
                 <BurgerMenu />
             </div>
         </div>
