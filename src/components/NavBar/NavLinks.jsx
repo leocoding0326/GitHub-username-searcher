@@ -1,6 +1,6 @@
 const NavLinks = () => {
     return (
-        <ul className="flex gap-3 items-center
+        <ul className="flex md:flex-row flex-col md:gap-3 gap-6 items-center
         [&>li>a]:text-gray-500 
         [&>li>a]:hover:bg-digital-blue-400 
         [&>li>a]:hover:text-white
@@ -10,7 +10,7 @@ const NavLinks = () => {
         [&>li>a]:transition-colors
         [&>li>a]:duration-500
         [&>li>a]:inline-block
-        text-sm
+        md:text-sm text-4xl
         ">
             <li><a href="">Tools</a></li>
             <li><a href="">Why</a></li>
