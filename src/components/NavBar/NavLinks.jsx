@@ -16,7 +16,7 @@ const NavLinks = () => {
             <li><a href="">Why</a></li>
             <li><a href="">How To</a></li>
         </ul>
-    )
+    );
 };
 
 export default NavLinks;

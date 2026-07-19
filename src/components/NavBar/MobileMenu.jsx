@@ -7,7 +7,7 @@ const MobileMenu = ({showMenu, open}) => {
             <BurgerButton showMenu={showMenu} open={open}/>
             <SlideMenu open={open}/>
         </div>
-    )
+    );
 };
 
 export default MobileMenu;

@@ -8,7 +8,7 @@ const SlideMenu = ({open}) => {
           <NavLinks />
           <NavAuth />
         </div>
-    )
-}
+    );
+};
 
 export default SlideMenu;
