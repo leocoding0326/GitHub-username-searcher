@@ -3,9 +3,9 @@ import { faLightbulb } from "@fortawesome/free-solid-svg-icons"
 
 const Tip = () => {
     return (
-    <p> 
-        <FontAwesomeIcon icon={faLightbulb}/>   
-        Tip: Try typing <span>"octocat", "torvalds"</span> or any GitHub username!
+    <p className="text-xs text-center"> 
+        <FontAwesomeIcon icon={faLightbulb} style={{color: "rgb(255, 212, 59)",}}/>   
+        Tip: Try typing <span className="text-digital-blue-600">"octocat", "torvalds"</span> or any GitHub username!
     </p>
     )
 }

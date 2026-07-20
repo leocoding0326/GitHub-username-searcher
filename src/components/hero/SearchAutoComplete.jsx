@@ -3,6 +3,7 @@ import SearchBar from './SearchBar';
 import SuggestionList from './SuggestionList';
 import debounce from "lodash.debounce";
 import HeroTitle from './HeroTitle';
+import Tip from './Tip';
 
 const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setSearch, onSubmit}) => {
 
@@ -84,6 +85,7 @@ const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setS
                     search={search}
                     selectUser={selectUser}/>
             </div>
+            <Tip />
         </div>
     );
 };
