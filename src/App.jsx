@@ -10,6 +10,7 @@ const App = () => {
   const [getResults, setResults] = useState(false)
   const [search, setSearch] = useState('')
   const [resultObject, setResultObject] = useState(null)
+  const [users, setUsers] = useState([]);
 
   const handleOnSearch = async (e) => {
     e.preventDefault()
@@ -38,6 +39,8 @@ const App = () => {
             search={search}
             setSearch={setSearch}
             onSubmit = {handleOnSearch}
+            users={users}
+            setUsers={setUsers}
           />
           <div className='min-h-[400px]'>
             {getResults && resultObject &&
