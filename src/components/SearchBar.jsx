@@ -11,7 +11,8 @@ const SearchBar = ({onSearch, search, handleClear, inputRef}) => {
                 placeholder='Enter username...'
                 autoComplete='off'
                 value={search}
-                ref={inputRef}/>
+                ref={inputRef}
+                className="border border-gray-300 rounded-md px-2 focus:outline-digital-blue-300 focus:outline-1"/>
             <SearchButton/>
             <ClearButton value = {search} handleClear = {handleClear}/>
         </div>);
