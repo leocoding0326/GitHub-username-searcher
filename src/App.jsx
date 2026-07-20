@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import userSearch from './api/userSearch.js';
-import SearchAutoComplete from './components/SearchAutoComplete.jsx';
+import SearchAutoComplete from './components/hero/SearchAutoComplete.jsx';
 import Results from './components/Results.jsx';
 import userResult from './api/userResult.js';
 import NavBar from './components/NavBar/NavBar.jsx';

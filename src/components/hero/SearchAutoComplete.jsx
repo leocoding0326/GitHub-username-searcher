@@ -2,6 +2,7 @@ import {useState, useMemo, useEffect, useRef} from 'react';
 import SearchBar from './SearchBar';
 import SuggestionList from './SuggestionList';
 import debounce from "lodash.debounce";
+import HeroTitle from './HeroTitle';
 
 const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setSearch, onSubmit}) => {
 
@@ -66,7 +67,8 @@ const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setS
     }
 
     return (
-        <div className='h-[60vh] flex flex-col justify-center'>
+        <div className='h-[40vh] flex flex-col justify-center'>
+            <HeroTitle />
             <SearchBar 
                 onSearch = {handleChange} 
                 search={search} 

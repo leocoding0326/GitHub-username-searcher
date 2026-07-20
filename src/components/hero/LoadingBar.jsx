@@ -1,5 +1,5 @@
 import { DotLottieReact } from '@lottiefiles/dotlottie-react'; 
-import loadingAnimation from './assets/loading2.lottie?url'
+import loadingAnimation from '../assets/loading2.lottie?url'
 
 const LoadingBar = () => {
     return (
