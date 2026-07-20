@@ -3,7 +3,7 @@ import SearchButton from "./SearchButton";
 
 const SearchBar = ({onSearch, search, handleClear, inputRef, onSubmit}) => {
     return (
-        <form onClick={onSubmit} className="relative flex flex-wrap gap-1 p-2 justify-center items-center">
+        <form onClick={onSubmit} className="relative flex gap-1 p-2 justify-center items-center">
             <input
                 onChange = {onSearch}
                 name='username'
@@ -12,7 +12,7 @@ const SearchBar = ({onSearch, search, handleClear, inputRef, onSubmit}) => {
                 autoComplete='off'
                 value={search}
                 ref={inputRef}
-                className="border border-gray-300 rounded-md px-2 py-1 focus:outline-digital-blue-200 focus:outline-1"/>
+                className="border border-gray-300 rounded-md px-2 py-1 focus:outline-digital-blue-200 focus:outline-1 flex-1"/>
             <SearchButton/>
             <ClearButton value = {search} handleClear = {handleClear}/>
         </form>);
