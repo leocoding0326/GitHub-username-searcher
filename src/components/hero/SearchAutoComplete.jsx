@@ -76,7 +76,7 @@ const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setS
                 handleClear = {handleClearClick}
                 inputRef={inputRef}
                 onSubmit={onSubmit}/>
-            <div className='min-h-[50%]'>    
+            <div className=''>    
                 <SuggestionList 
                     data ={users} 
                     dataHandler={getLabel} 
