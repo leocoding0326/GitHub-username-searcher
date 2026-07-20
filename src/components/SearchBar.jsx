@@ -3,7 +3,7 @@ import SearchButton from "./SearchButton";
 
 const SearchBar = ({onSearch, search, handleClear, inputRef, onSubmit}) => {
     return (
-        <form onClick={onSubmit}>
+        <form onClick={onSubmit} className="relative">
             <input
                 onChange = {onSearch}
                 name='username'
