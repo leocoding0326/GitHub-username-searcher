@@ -26,14 +26,10 @@ const App = () => {
   const onClear = () => {
     setResults(false);
   };
-
-  return (
-    <NavBar />
-  )
   
-  {/*return (
-    <div>
-      <h1>Username Checker</h1>
+  return (
+    <div className='max-w-[1440px] mx-auto'>
+      <NavBar />
         <form onSubmit={handleOnSearch}>
           <SearchAutoComplete 
             searchFunction={userSearch}
@@ -53,7 +49,6 @@ const App = () => {
         }
     </div>
   );
-*/}
 } 
 
 export default App;
