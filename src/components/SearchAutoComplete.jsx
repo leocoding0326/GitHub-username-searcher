@@ -22,7 +22,7 @@ const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setS
                     console.log(`Something went wrong ${error}`)
                 }
                 finally {
-                   {/* setLoading(false)*/}
+                   setLoading(false)
                 };
 
             }, 600),
