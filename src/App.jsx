@@ -30,24 +30,22 @@ const App = () => {
   return (
     <div className='max-w-[1440px] mx-auto'>
       <NavBar />
-      <main className='h-screen flex flex-col justify-around items-center'>
-        <form onSubmit={handleOnSearch}>
+      <main className='min-h-screen w-full flex flex-col items-center gap-10 justify-center'>
           <SearchAutoComplete 
             searchFunction={userSearch}
             getLabel={(user) => user.login}
             clearResult={onClear}
             search={search}
             setSearch={setSearch}
-            startSearch = {handleOnSearch}
+            onSubmit = {handleOnSearch}
           />
-        </form>
-        {getResults && resultObject &&
-          <div>
+          <div className='min-h-[400px]'>
+            {getResults && resultObject &&
               <Results 
                 resultObject = {resultObject}
               />
+            }
           </div>
-        }
       </main>
     </div>
   );

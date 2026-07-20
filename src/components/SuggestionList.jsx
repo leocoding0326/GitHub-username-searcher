@@ -2,7 +2,7 @@ import LoadingBar from './LoadingBar'
 
 const SuggestionList = ({ data = [], dataHandler, isLoading, handleClick, search, selectUser }) => {
     return (
-        <ul className="suggestion-list">
+        <ul className='relative'>
             {isLoading ? (
                 <li className="loading">
                     <LoadingBar />

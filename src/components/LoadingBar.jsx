@@ -3,8 +3,8 @@ import loadingAnimation from './assets/loading.lottie?url'
 
 const LoadingBar = () => {
     return (
-        <div>
-            <DotLottieReact src={loadingAnimation} loop autoplay/>
+        <div className='h-8 w-8'>
+            <DotLottieReact src={loadingAnimation} loop autoplay />
         </div>
     );
 };

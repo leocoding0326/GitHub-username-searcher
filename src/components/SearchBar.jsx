@@ -1,9 +1,9 @@
 import ClearButton from "./ClearButton";
 import SearchButton from "./SearchButton";
 
-const SearchBar = ({onSearch, search, handleClear, inputRef}) => {
+const SearchBar = ({onSearch, search, handleClear, inputRef, onSubmit}) => {
     return (
-        <div>
+        <form onClick={onSubmit}>
             <input
                 onChange = {onSearch}
                 name='username'
@@ -12,10 +12,10 @@ const SearchBar = ({onSearch, search, handleClear, inputRef}) => {
                 autoComplete='off'
                 value={search}
                 ref={inputRef}
-                className="border border-gray-300 rounded-md px-2 focus:outline-digital-blue-300 focus:outline-1"/>
+                className="border border-gray-300 rounded-md px-2 focus:outline-digital-blue-200 focus:outline-1"/>
             <SearchButton/>
             <ClearButton value = {search} handleClear = {handleClear}/>
-        </div>);
+        </form>);
 };
 
 export default SearchBar;

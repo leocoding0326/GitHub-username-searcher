@@ -3,7 +3,7 @@ import SearchBar from './SearchBar';
 import SuggestionList from './SuggestionList';
 import debounce from "lodash.debounce";
 
-const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setSearch, startSearch}) => {
+const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setSearch, onSubmit}) => {
 
     const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -22,7 +22,7 @@ const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setS
                     console.log(`Something went wrong ${error}`)
                 }
                 finally {
-                    setLoading(false)
+                   {/* setLoading(false)*/}
                 };
 
             }, 600),
@@ -66,21 +66,22 @@ const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setS
     }
 
     return (
-        <div>
+        <div className='h-[60vh] flex flex-col justify-center'>
             <SearchBar 
                 onSearch = {handleChange} 
                 search={search} 
                 handleClear = {handleClearClick}
-                inputRef={inputRef}/>
-
-            <SuggestionList 
-                data ={users} 
-                dataHandler={getLabel} 
-                isLoading={loading}
-                handleClick={handleSuggestionClick}
-                search={search}
-                selectUser={selectUser}/>
-                
+                inputRef={inputRef}
+                onSubmit={onSubmit}/>
+            <div className='min-h-[50%]'>    
+                <SuggestionList 
+                    data ={users} 
+                    dataHandler={getLabel} 
+                    isLoading={loading}
+                    handleClick={handleSuggestionClick}
+                    search={search}
+                    selectUser={selectUser}/>
+            </div>
         </div>
     );
 };
