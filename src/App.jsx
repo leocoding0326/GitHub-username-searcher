@@ -30,6 +30,7 @@ const App = () => {
   return (
     <div className='max-w-[1440px] mx-auto'>
       <NavBar />
+      <main className='h-screen flex flex-col justify-around items-center'>
         <form onSubmit={handleOnSearch}>
           <SearchAutoComplete 
             searchFunction={userSearch}
@@ -47,6 +48,7 @@ const App = () => {
               />
           </div>
         }
+      </main>
     </div>
   );
 } 
