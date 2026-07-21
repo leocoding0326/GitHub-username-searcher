@@ -13,7 +13,7 @@ const NavBar = () => {
     };
     
     return (
-        <header className="h-14 px-6 flex justify-between gap-2 items-center">
+        <header className="h-14 px-6 flex justify-between gap-2 items-center bg-digital-blue-900">
             <Logo imgSrc = {logo} altText="github finder logo"/>
             <div className="hidden md:flex gap-4">
                 <NavLinks />

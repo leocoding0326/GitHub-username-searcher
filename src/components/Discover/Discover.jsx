@@ -1,12 +1,14 @@
 import SearchImage from "./SearchImage";
+import DiscoverText from "./DiscoverTexts";
 import discoverImg from "../../assets/discoverImg.svg";
 
 const Discover = () => {
     return (
-        <div className="h-[60vh] w-[80%] rounded-md shadow-sm mb-10 border border-gray-100 flex flex-col items-center">
-            <div>
-                <SearchImage src={discoverImg}/>
-            </div>
+        <div className="h-[60vh] w-[80%]  mb-10 flex flex-col items-center text-center justify-center">
+            
+            <SearchImage src={discoverImg}/>
+            <DiscoverText />
+
         </div>
     )
 }
