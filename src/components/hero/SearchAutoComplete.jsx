@@ -68,7 +68,7 @@ const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setS
     }
 
     return (
-        <div className='h-[20vh] flex flex-col justify-center sm:min-w-[80%] mx-4'>
+        <div className='h-[40vh] flex flex-col justify-center sm:min-w-[80%] mx-4'>
             <HeroTitle />
             <SearchBar 
                 onSearch = {handleChange} 

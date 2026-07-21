@@ -34,7 +34,7 @@ const App = () => {
   return (
     <div className='max-w-[1440px] mx-auto'>
       <NavBar />
-      <main className='min-h-screen w-full flex flex-col items-center gap-4 font-code js justify-around'>
+      <main className='min-h-screen w-full flex flex-col items-center gap-4 font-code'>
           <SearchAutoComplete 
             searchFunction={userSearch}
             getLabel={(user) => user.login}
