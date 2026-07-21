@@ -4,6 +4,7 @@ import SearchAutoComplete from './components/hero/SearchAutoComplete.jsx';
 import Results from './components/Results.jsx';
 import userResult from './api/userResult.js';
 import NavBar from './components/NavBar/NavBar.jsx';
+import Discover from './components/Discover/Discover.jsx';
 
 const App = () => {
 
@@ -33,7 +34,7 @@ const App = () => {
   return (
     <div className='max-w-[1440px] mx-auto'>
       <NavBar />
-      <main className='min-h-screen w-full flex flex-col items-center gap-10 font-code'>
+      <main className='min-h-screen w-full flex flex-col items-center gap-4 font-code js justify-around'>
           <SearchAutoComplete 
             searchFunction={userSearch}
             getLabel={(user) => user.login}
@@ -44,13 +45,8 @@ const App = () => {
             users={users}
             setUsers={setUsers}
           />
-          <div className='min-h-[400px]'>
-            {getResults && resultObject &&
-              <Results 
-                resultObject = {resultObject}
-              />
-            }
-          </div>
+
+          <Discover />
       </main>
     </div>
   );
