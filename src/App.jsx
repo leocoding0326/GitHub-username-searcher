@@ -7,10 +7,11 @@ import NavBar from './components/NavBar/NavBar.jsx';
 
 const App = () => {
 
-  const [getResults, setResults] = useState(false)
-  const [search, setSearch] = useState('')
-  const [resultObject, setResultObject] = useState(null)
-  const [users, setUsers] = useState([]);
+  const [getResults, setResults] = useState(false);//Checks if results is dislpayed
+  const [search, setSearch] = useState('');//Search bar values
+  const [resultObject, setResultObject] = useState(null);//Return Result Object
+  const [users, setUsers] = useState([]);// Controls arrays of suggestions
+
 
   const handleOnSearch = async (e) => {
     e.preventDefault()
@@ -27,6 +28,7 @@ const App = () => {
   const onClear = () => {
     setResults(false);
   };
+
   
   return (
     <div className='max-w-[1440px] mx-auto'>

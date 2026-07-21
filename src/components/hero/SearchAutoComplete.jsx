@@ -5,8 +5,8 @@ import debounce from "lodash.debounce";
 import HeroTitle from './HeroTitle';
 import Tip from './Tip';
 
-const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setSearch, onSubmit, users, setUsers}) => {
-    
+const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setSearch, onSubmit, users, setUsers, setClickOutside}) => {
+
     const [loading, setLoading] = useState(false);
     const [selectUser, setSelectUser] = useState(null)
     const inputRef = useRef(null)
@@ -14,6 +14,7 @@ const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setS
     const debouncedSearch = useMemo(
         () => 
             debounce(async (value) => {
+                 console.log("Searching for:", value);
 
                 try {
                     const results = await searchFunction(value);
