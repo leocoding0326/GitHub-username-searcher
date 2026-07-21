@@ -4,7 +4,7 @@ import discoverImg from "../../assets/discoverImg.svg";
 
 const Discover = () => {
     return (
-        <div className="h-[60vh] w-[80%]  mb-10 flex flex-col items-center text-center justify-center">
+        <div className="md:w-[80%] w-[90%] mb-10 flex flex-col items-center text-center justify-center shadow-md border-2 rounded-xl p-6">
             
             <SearchImage src={discoverImg}/>
             <DiscoverText />

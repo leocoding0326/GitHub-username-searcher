@@ -2,7 +2,7 @@ import { useState } from "react";
 import Logo from "./Logo";
 import NavLinks from "./NavLinks";
 import NavAuth from "./NavAuth";
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/logoWhite.svg";
 import MobileMenu from "./MobileMenu";
 
 const NavBar = () => {
