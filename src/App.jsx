@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import userSearch from './api/userSearch.js';
 import SearchAutoComplete from './components/hero/SearchAutoComplete.jsx';
 import Results from './components/Results.jsx';
@@ -12,8 +12,13 @@ const App = () => {
   const [search, setSearch] = useState('');//Search bar values
   const [resultObject, setResultObject] = useState(null);//Return Result Object
   const [users, setUsers] = useState([]);// Controls arrays of suggestions
-  const [popularArr, setPopular] = useState([])
-
+  const [popularUsers, setPopularUsers] = useState([
+  "torvalds",
+  "gaearon",
+  "yyx990803",
+  "sindresorhus",
+  "tj",
+]); //Mocks a small database to use in popular searches
 
   const handleOnSearch = async (e) => {
     e.preventDefault()
@@ -25,10 +30,6 @@ const App = () => {
     const result = await userResult(search);
     setResultObject(result);
     setResults(true);
-    if(!result?.login) {
-      return
-    }
-    setPopular(prevs => [...prevs, result.login])
   };
 
   const onClear = () => {
@@ -51,7 +52,7 @@ const App = () => {
             setUsers={setUsers}
           />
 
-          <Discover />
+          <Discover popularArray={popularUsers}/>
       </main>
     </div>
   );
