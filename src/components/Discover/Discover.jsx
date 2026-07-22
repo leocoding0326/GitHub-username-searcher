@@ -1,5 +1,6 @@
 import SearchImage from "./SearchImage";
 import DiscoverText from "./DiscoverTexts";
+import Divider from "../Divider";
 import discoverImg from "../../assets/discoverImg.svg";
 
 const Discover = () => {
@@ -8,6 +9,8 @@ const Discover = () => {
             
             <SearchImage src={discoverImg}/>
             <DiscoverText />
+            <Divider />
+            
 
         </div>
     )
