@@ -68,15 +68,18 @@ const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setS
     }
 
     return (
-        <div className='md:h-[40vh] h-[60vh] flex flex-col justify-center sm:min-w-[80%] mx-4'>
+        <div className='sm:h-[40vh] h-[60vh] flex flex-col sm:justify-center justify-around sm:min-w-[80%] mx-4'>
             <HeroTitle />
+            <div>
             <SearchBar 
                 onSearch = {handleChange} 
                 search={search} 
                 handleClear = {handleClearClick}
                 inputRef={inputRef}
                 onSubmit={onSubmit}/>
-            <div className=''>    
+            <Tip />
+            </div>
+            <div>    
                 <SuggestionList 
                     data ={users} 
                     dataHandler={getLabel} 
@@ -85,7 +88,6 @@ const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setS
                     search={search}
                     selectUser={selectUser}/>
             </div>
-            <Tip />
         </div>
     );
 };

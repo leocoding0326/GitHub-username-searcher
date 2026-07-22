@@ -12,6 +12,7 @@ const App = () => {
   const [search, setSearch] = useState('');//Search bar values
   const [resultObject, setResultObject] = useState(null);//Return Result Object
   const [users, setUsers] = useState([]);// Controls arrays of suggestions
+  const [popularArr, setPopular] = useState([])
 
 
   const handleOnSearch = async (e) => {
@@ -24,6 +25,10 @@ const App = () => {
     const result = await userResult(search);
     setResultObject(result);
     setResults(true);
+    if(!result?.login) {
+      return
+    }
+    setPopular(prevs => [...prevs, result.login])
   };
 
   const onClear = () => {
