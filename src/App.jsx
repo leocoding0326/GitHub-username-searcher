@@ -5,6 +5,7 @@ import Results from './components/Results.jsx';
 import userResult from './api/userResult.js';
 import NavBar from './components/NavBar/NavBar.jsx';
 import Discover from './components/Discover/Discover.jsx';
+import Footer from './components/Footer/Footer.jsx';
 
 const App = () => {
 
@@ -54,6 +55,7 @@ const App = () => {
 
           <Discover popularArray={popularUsers}/>
       </main>
+      <Footer />
     </div>
   );
 } 
