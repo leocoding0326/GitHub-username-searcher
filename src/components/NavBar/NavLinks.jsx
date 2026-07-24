@@ -11,9 +11,10 @@ const NavLinks = () => {
         [&>li>a]:inline-block
         md:text-sm text-4xl
         ">
-            <li><a href="">Tools</a></li>
-            <li><a href="">Why</a></li>
-            <li><a href="">How To</a></li>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Features</a></li>
+            <li><a href="">Contact</a></li>
         </ul>
     );
 };

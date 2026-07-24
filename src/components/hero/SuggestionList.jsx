@@ -9,7 +9,7 @@ const SuggestionList = ({ data = [], dataHandler, isLoading, handleClick, search
                 </li>
             ) : data.length > 0 ? (
                 data.map((item) => (
-                    <li key={item.id} onClick={() => handleClick(item)} className='flex items-center hover:bg-digital-blue-100 transition-colors rounded-md'>
+                    <li key={item.id} onClick={() => handleClick(item)} className='flex items-center hover:bg-digital-blue-100 transition-colors rounded-md cursor-pointer'>
                         {dataHandler(item)}
                         <span className='flex-1 border-dotted border-b border-gray-200 mx-2'></span>
                     </li>
