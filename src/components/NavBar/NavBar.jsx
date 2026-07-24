@@ -13,14 +13,18 @@ const NavBar = () => {
     };
     
     return (
-        <header className="h-14 px-6 flex justify-between gap-2 items-center bg-digital-blue-900">
-            <Logo imgSrc = {logo} altText="github finder logo"/>
+    <nav className="w-full bg-digital-blue-900">
+        <div className="max-w-[1440px] mx-auto h-14 px-6 flex justify-between items-center gap-2">
+            <Logo imgSrc={logo} altText="github finder logo" />
+
             <div className="hidden md:flex gap-4">
                 <NavLinks />
                 <NavAuth />
             </div>
-                <MobileMenu showMenu={handleToggle} open ={open}/>
-        </header>
+
+            <MobileMenu showMenu={handleToggle} open={open} />
+        </div>
+    </nav>
     );
 };
 
