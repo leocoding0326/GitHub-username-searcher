@@ -43,7 +43,7 @@ const App = () => {
       <header>
         <NavBar />
       </header>
-      <main className='min-h-screen w-full flex flex-col items-center gap-4 font-code max-w-[1440px] mx-auto'>
+      <main className='min-h-screen w-full flex flex-col items-center gap-4 font-code max-w-360 mx-auto'>
           <SearchAutoComplete 
             searchFunction={userSearch}
             getLabel={(user) => user.login}
