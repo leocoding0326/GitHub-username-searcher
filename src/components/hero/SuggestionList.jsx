@@ -1,10 +1,10 @@
 import LoadingBar from './LoadingBar'
 
-const SuggestionList = ({ data = [], dataHandler, isLoading, handleClick, search, selectUser }) => {
+const SuggestionList = ({ data = [], dataHandler, isLoading, handleClick, search, hasTyped }) => {
     return (
         <ul className='absolute bg-white w-[50%] [&>li]:p-5 shadow-sm transition-all rounded-md'>
             {isLoading ? (
-                <li className="loading">
+                <li>
                     <LoadingBar />
                 </li>
             ) : data.length > 0 ? (
@@ -14,7 +14,7 @@ const SuggestionList = ({ data = [], dataHandler, isLoading, handleClick, search
                         <span className='flex-1 border-dotted border-b border-gray-200 mx-2'></span>
                     </li>
                 ))
-            ) : search !== '' && !selectUser ? (
+            ) : hasTyped && data.length === 0 ? (
                 <li>No user found...</li>
             ) : null}
         </ul>

@@ -8,13 +8,12 @@ import Tip from './Tip';
 const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setSearch, onSubmit, users, setUsers}) => {
 
     const [loading, setLoading] = useState(false);
-    const [selectUser, setSelectUser] = useState(null)
+    const [hasTyped, setHasTyped] = useState(false)
     const inputRef = useRef(null)
     
     const debouncedSearch = useMemo(
         () => 
             debounce(async (value) => {
-                 console.log("Searching for:", value);
 
                 try {
                     const results = await searchFunction(value);
@@ -39,13 +38,13 @@ const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setS
 
     const handleChange = (e) => {
     const value = e.target.value;
-    setSelectUser(null);
+    setHasTyped(true)
     setSearch(value);
         if(value.trim() === '') {
             debouncedSearch.cancel();
             setUsers([]);
             setLoading(false);
-            setSelectUser(null)
+            setHasTyped(false)
             return;
         };
         debouncedSearch(value);
@@ -56,7 +55,7 @@ const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setS
     const handleSuggestionClick = (item) => {
         setSearch(getLabel(item));
         inputRef.current?.focus();
-        setSelectUser(item)
+        setHasTyped(false)
         setUsers([]);
     };
 
@@ -64,7 +63,7 @@ const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setS
         setUsers([]);
         setSearch('');
         clearResult();
-        setSelectUser(null);
+        setHasTyped(false);
     }
 
     return (
@@ -86,7 +85,7 @@ const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setS
                     isLoading={loading}
                     handleClick={handleSuggestionClick}
                     search={search}
-                    selectUser={selectUser}/>
+                    hasTyped={hasTyped}/>
             </div>
         </div>
     );

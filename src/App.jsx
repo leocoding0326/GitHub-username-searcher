@@ -53,7 +53,7 @@ const App = () => {
             setUsers={setUsers}
           />
 
-          <Discover popularArray={popularUsers}/>
+          <Discover popularArray={popularUsers} setSearch={setSearch} setUsers={setUsers}/>
       </main>
       <Footer />
     </div>
