@@ -5,7 +5,7 @@ import debounce from "lodash.debounce";
 import HeroTitle from './HeroTitle';
 import Tip from './Tip';
 
-const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setSearch, onSubmit, users, setUsers, setClickOutside}) => {
+const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setSearch, onSubmit, users, setUsers}) => {
 
     const [loading, setLoading] = useState(false);
     const [selectUser, setSelectUser] = useState(null)
