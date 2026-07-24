@@ -21,3 +21,34 @@
   --font-code:'Google Sans Code', monospace;
   --font-notch: 'Stack Sans Notch', monospace;
 }
+
+
+@layer components {
+  .dot-grid-bg {
+    position: relative;
+    isolation: isolate;
+    background-color: #f9fbfd;
+  }
+
+  .dot-grid-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, #99C2FF 0.96px, transparent 0.96px);
+    background-size: 12px 12px;
+
+    mask-image: radial-gradient(
+      ellipse at center,
+      transparent 40%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
+    -webkit-mask-image: radial-gradient(
+      ellipse at center,
+      transparent 40%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
+
+    pointer-events: none;
+    z-index: -1;
+  }
+}

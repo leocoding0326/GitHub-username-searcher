@@ -43,7 +43,8 @@ const App = () => {
       <header>
         <NavBar />
       </header>
-      <main className='min-h-screen w-full flex flex-col items-center gap-4 font-code max-w-360 mx-auto'>
+      <main className='min-h-screen w-full font-code dot-grid-bg'>
+        <div className='max-w-360 w-full flex flex-col items-center gap-4 mx-auto'>
           <SearchAutoComplete 
             searchFunction={userSearch}
             getLabel={(user) => user.login}
@@ -56,7 +57,9 @@ const App = () => {
           />
 
           <Discover popularArray={popularUsers} setSearch={setSearch} setUsers={setUsers}/>
+          </div>
       </main>
+      
       <Footer />
     </div>
   );
