@@ -1,7 +1,7 @@
 import ProfileHeader from "./ProfileHeader";
 
 
-const Profile = () => {
+const Profile = ({resultObject}) => {
     return (
         <div>
             <ProfileHeader />

@@ -37,7 +37,7 @@ const App = () => {
     setResultsDisplay(false);
   };
 
-  
+  console.log(resultObject)
   return (
     <div>
       <header>

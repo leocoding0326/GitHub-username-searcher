@@ -3,7 +3,7 @@ import Profile from "./ResultsProfile/Profile";
 const Results = ({resultObject}) => {
     return (
         <div>
-            <Profile />
+            <Profile resultObject={resultObject}/>
         </div>
     );
 };
