@@ -1,6 +1,6 @@
 import Profile from "./ResultsProfile/Profile";
 
-const Results = () => {
+const Results = ({resultObject}) => {
     return (
         <div>
             <Profile />

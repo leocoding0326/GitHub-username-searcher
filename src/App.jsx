@@ -57,7 +57,7 @@ const App = () => {
           />
 
          {/* <Discover popularArray={popularUsers} setSearch={setSearch} setUsers={setUsers}/> */}
-            <Results />
+            <Results resultObject={resultObject}/>
           </div>
       </main>
       
