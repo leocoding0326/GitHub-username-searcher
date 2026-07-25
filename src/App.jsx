@@ -35,6 +35,7 @@ const App = () => {
 
   const onClear = () => {
     setResultsDisplay(false);
+    setResultObject(null)
   };
 
   console.log(resultObject)
@@ -57,7 +58,7 @@ const App = () => {
           />
 
          {/* <Discover popularArray={popularUsers} setSearch={setSearch} setUsers={setUsers}/> */}
-            <Results resultObject={resultObject}/>
+            {resultDisplay && <Results resultObject={resultObject}/>}
           </div>
       </main>
       

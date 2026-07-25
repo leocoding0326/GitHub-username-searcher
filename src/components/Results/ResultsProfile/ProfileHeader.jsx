@@ -1,7 +1,7 @@
 const ProfileHeader = ({img, profileName, username, bio}) => {
     return (
         <div>
-            <img src={img} alt={description} />
+            <img src={img} alt={bio} />
             <h4>{profileName}</h4>
             <h5>{username}</h5>
             <p>{bio}</p>
