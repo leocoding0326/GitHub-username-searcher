@@ -43,7 +43,7 @@ const App = () => {
       <header>
         <NavBar />
       </header>
-      <main className='min-h-screen w-full font-code dot-grid-bg'>
+      <main className='min-h-screen w-full font-code dot-grid-bg py-15'>
         <div className='max-w-360 w-full flex flex-col items-center gap-4 mx-auto'>
           <SearchAutoComplete 
             searchFunction={userSearch}
