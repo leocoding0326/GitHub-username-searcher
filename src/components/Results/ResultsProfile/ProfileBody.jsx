@@ -6,7 +6,6 @@ import { faCalendarDay } from "@fortawesome/free-solid-svg-icons";
 const ProfileBody = ({location, link, joined}) => {
     const joinedDate = new Date(joined).toLocaleDateString("en-US", {
     month: "short",
-    day: "numeric",
     year: "numeric",
   });
 
