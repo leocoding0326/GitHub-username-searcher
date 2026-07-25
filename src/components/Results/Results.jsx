@@ -1,4 +1,4 @@
-import ResultsProfile from "./ResultsProfile";
+import ResultsProfile from "./ResultsProfile/ResultsProfile";
 
 const Results = () => {
     return (
