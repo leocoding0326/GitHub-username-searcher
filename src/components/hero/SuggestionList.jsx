@@ -2,7 +2,7 @@ import LoadingBar from './LoadingBar'
 
 const SuggestionList = ({ data = [], dataHandler, isLoading, handleClick, search, hasTyped }) => {
     return (
-        <ul className='absolute bg-white w-[50%] [&>li]:p-5 shadow-sm transition-all rounded-md'>
+        <ul className='absolute bg-white w-[80%] [&>li]:p-5 shadow-sm transition-all rounded-md'>
             {isLoading ? (
                 <li>
                     <LoadingBar />
