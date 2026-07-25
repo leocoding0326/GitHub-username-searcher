@@ -1,9 +1,9 @@
-import ResultsProfile from "./ResultsProfile/ResultsProfile";
+import Profile from "./ResultsProfile/Profile";
 
 const Results = () => {
     return (
         <div>
-            <ResultsProfile />
+            <Profile />
         </div>
     );
 };

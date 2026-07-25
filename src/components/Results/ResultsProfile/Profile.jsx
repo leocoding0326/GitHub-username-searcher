@@ -1,4 +1,4 @@
-const ResultsProfile = () => {
+const Profile = () => {
     return (
         <div>
             <img src="" alt="" />
@@ -10,4 +10,4 @@ const ResultsProfile = () => {
     );
 };
 
-export default ResultsProfile;
+export default Profile;
