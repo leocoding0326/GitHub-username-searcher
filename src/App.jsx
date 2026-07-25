@@ -9,7 +9,7 @@ import Results from './components/Results/Results.jsx';
 
 const App = () => {
 
-  const [getResults, setResults] = useState(false);//Checks if results is dislpayed
+  const [resultDisplay, setResultsDisplay] = useState(false);//Checks if results is dislpayed
   const [search, setSearch] = useState('');//Search bar values
   const [resultObject, setResultObject] = useState(null);//Return Result Object
   const [users, setUsers] = useState([]);// Controls arrays of suggestions
@@ -30,11 +30,11 @@ const App = () => {
 
     const result = await userResult(search);
     setResultObject(result);
-    setResults(true);
+    setResultsDisplay(true);
   };
 
   const onClear = () => {
-    setResults(false);
+    setResultsDisplay(false);
   };
 
   
