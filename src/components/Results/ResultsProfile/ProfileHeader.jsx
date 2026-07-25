@@ -1,10 +1,10 @@
-const ProfileHeader = ({img, profileName, username, description}) => {
+const ProfileHeader = ({img, profileName, username, bio}) => {
     return (
         <div>
             <img src={img} alt={description} />
             <h4>{profileName}</h4>
             <h5>{username}</h5>
-            <p>{description}</p>
+            <p>{bio}</p>
         </div>
     );
 };
