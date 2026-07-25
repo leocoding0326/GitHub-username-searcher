@@ -6,7 +6,7 @@ import discoverImg from "../../assets/discoverImg.svg";
 
 const Discover = ({popularArray, setSearch, setUsers}) => {
     return (
-        <div className="md:w-[80%] w-[90%] flex flex-col items-center text-center justify-center shadow-md border-2 border-gray-300 rounded-xl p-6 bg-slate-50">
+        <div className="md:w-[80%] w-[90%] flex flex-col items-center text-center justify-center shadow-md border-2 border-digital-blue-100 rounded-xl p-6 bg-slate-50">
             
             <SearchImage src={discoverImg}/>
             <DiscoverText />
