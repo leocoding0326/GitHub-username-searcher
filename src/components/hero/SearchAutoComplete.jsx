@@ -86,7 +86,7 @@ const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setS
     }, []);
 
     return (
-        <div ref={searchContainerRef} className='sm:h-[40vh] h-[60vh] flex flex-col justify-center sm:min-w-[80%] mx-4'>
+        <div ref={searchContainerRef} className='h-[40vh] flex flex-col justify-center sm:min-w-[80%] mx-4'>
             <HeroTitle />
             <div>
             <SearchBar 

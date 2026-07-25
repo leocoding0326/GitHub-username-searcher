@@ -12,7 +12,7 @@ const SearchBar = ({onSearch, search, handleClear, inputRef, onSubmit}) => {
                 autoComplete='off'
                 value={search}
                 ref={inputRef}
-                className="border border-gray-300 rounded-md px-2 py-1 focus:outline-digital-blue-200 focus:outline-1 flex-1"/>
+                className="border border-gray-300 rounded-md px-2 py-1 focus:outline-digital-blue-200 focus:outline-1 flex-1 bg-slate-50"/>
             <SearchButton/>
             <ClearButton value = {search} handleClear = {handleClear}/>
         </form>);
