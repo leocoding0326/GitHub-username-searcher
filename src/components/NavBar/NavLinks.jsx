@@ -9,7 +9,7 @@ const NavLinks = () => {
         [&>li>a]:transition-colors
         [&>li>a]:duration-500
         [&>li>a]:inline-block
-        md:text-sm text-4xl
+        md:text-sm text-2xl
         ">
             <li><a href="">Home</a></li>
             <li><a href="">About</a></li>
