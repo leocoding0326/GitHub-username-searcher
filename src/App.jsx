@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import userSearch from './api/userSearch.js';
 import SearchAutoComplete from './components/hero/SearchAutoComplete.jsx';
-import Results from './components/Results.jsx';
 import userResult from './api/userResult.js';
 import NavBar from './components/NavBar/NavBar.jsx';
 import Discover from './components/Discover/Discover.jsx';
@@ -56,7 +55,7 @@ const App = () => {
             setUsers={setUsers}
           />
 
-          <Discover popularArray={popularUsers} setSearch={setSearch} setUsers={setUsers}/>
+         {/* <Discover popularArray={popularUsers} setSearch={setSearch} setUsers={setUsers}/> */}
           </div>
       </main>
       
