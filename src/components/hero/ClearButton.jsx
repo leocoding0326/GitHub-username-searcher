@@ -7,7 +7,7 @@ const ClearButton = ({value, handleClear}) => {
     if (value.trim() === '') {
         return
     }
-    return <button onClick={handleClear} className='absolute right-28 text-gray-300 cursor-pointer hover:text-gray-500'>
+    return <button onClick={handleClear} className='absolute min-[375px]:right-28 right-15 text-gray-300 cursor-pointer hover:text-gray-500'>
         <FontAwesomeIcon icon={faCircleXmark} />
     </button>
 };

@@ -6,7 +6,7 @@ import { faBuilding } from "@fortawesome/free-solid-svg-icons";
 
 const UserStats = ({followers, following, repos, gists, org}) => {
     return (
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] place-items-center gap-6 p-4 bg-slate-50 border border-digital-blue-100 rounded-md shadow-sm">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-6 p-4 bg-slate-50 border border-digital-blue-100 rounded-md shadow-sm">
             <div className="flex items-center gap-4">
                 <FontAwesomeIcon icon={faUsers} className="text-digital-blue-400 text-2xl pb-2"/>
                 <div>
@@ -32,6 +32,14 @@ const UserStats = ({followers, following, repos, gists, org}) => {
             </div>
             
             <div className="flex items-center gap-4">
+                <FontAwesomeIcon icon={faBuilding} className="text-green-400 text-2xl pb-2"/>
+                <div>
+                <p className="font-bold text-xl">{org || 'N/A'}</p>
+                <p className="text-gray-400 text-sm">Organizations</p>
+                </div>
+            </div>
+
+            <div className="flex items-center gap-4">
                 <FontAwesomeIcon icon={faStar} className="text-yellow-400 text-2xl pb-2"/>
                 <div>
                 <p className="font-bold text-xl">{gists}</p>
@@ -39,13 +47,7 @@ const UserStats = ({followers, following, repos, gists, org}) => {
                 </div>
             </div>
             
-            <div className="flex items-center gap-4">
-                <FontAwesomeIcon icon={faBuilding} className="text-green-400 text-2xl pb-2"/>
-                <div>
-                <p className="font-bold text-xl">{org || 'N/A'}</p>
-                <p className="text-gray-400 text-sm">Organizations</p>
-                </div>
-            </div>
+            
         </div>
     );
 };
