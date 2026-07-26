@@ -30,7 +30,6 @@ const UserStats = ({followers, following, repos, gists, org}) => {
                 <p className="text-gray-400 text-sm">Repositories</p>
                 </div>
             </div>
-            
             <div className="flex items-center gap-4">
                 <FontAwesomeIcon icon={faBuilding} className="text-green-400 text-2xl pb-2"/>
                 <div>
@@ -38,7 +37,7 @@ const UserStats = ({followers, following, repos, gists, org}) => {
                 <p className="text-gray-400 text-sm">Organizations</p>
                 </div>
             </div>
-
+            
             <div className="flex items-center gap-4">
                 <FontAwesomeIcon icon={faStar} className="text-yellow-400 text-2xl pb-2"/>
                 <div>
