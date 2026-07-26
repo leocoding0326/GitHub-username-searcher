@@ -7,7 +7,7 @@ const Results = ({resultObject}) => {
                 <Profile resultObject={resultObject}/>
             </aside>
             <section>
-                
+
             </section>
         </div>
     );
