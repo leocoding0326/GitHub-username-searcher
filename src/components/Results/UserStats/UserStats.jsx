@@ -6,7 +6,7 @@ import { faBuilding } from "@fortawesome/free-solid-svg-icons";
 
 const UserStats = ({followers, following, repos, gists, org}) => {
     return (
-        <ul>
+        <ul className="flex">
             <li>
                 <FontAwesomeIcon icon={faUsers} />
                 <p>{followers}</p>
