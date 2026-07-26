@@ -29,7 +29,7 @@ const UserStats = ({followers, following, repos, gists, org}) => {
             </li>
             <li>
                 <FontAwesomeIcon icon={faBuilding} />
-                <p>{org}</p>
+                <p>{org || 'N/A'}</p>
                 <p>Organizations</p>
             </li>
         </ul>
