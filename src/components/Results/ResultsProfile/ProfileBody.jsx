@@ -10,9 +10,9 @@ const ProfileBody = ({location, link, joined}) => {
   });
 
     return (
-        <ul className="[&>li]:p-1 mt-2">
+        <ul className="[&>li]:p-2 mt-2">
             <li><FontAwesomeIcon icon={faLocationDot}/> {location}</li>
-            <li className="text-digital-blue-500"><FontAwesomeIcon icon={faLink}/> <a href={link}>{link}</a></li>
+            <li className="text-digital-blue-500"><FontAwesomeIcon icon={faLink}/> <a href={link} className="hover:underline">Git Profile</a></li>
             <li><FontAwesomeIcon icon={faCalendarDay}/> {joinedDate}</li>
         </ul>
     );

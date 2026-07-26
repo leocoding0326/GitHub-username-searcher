@@ -1,6 +1,6 @@
 const ProfileHeader = ({img, profileName, username, bio='No Bio Fund'}) => {
     return (
-        <div className="flex flex-col items-center gap-1">
+        <div className="flex flex-col items-center gap-2">
             <div className="w-28 h-auto">
                 <img src={img} alt={bio} className="w-full h-auto rounded-full"/>
             </div>

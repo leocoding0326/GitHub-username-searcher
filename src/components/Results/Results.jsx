@@ -4,7 +4,7 @@ import UserStats from "./UserStats/UserStats";
 
 const Results = ({resultObject}) => {
     return (
-        <div className="grid grid-cols-[30%_70%] gap-8 w-full px-10">
+        <div className="grid grid-cols-[20%_70%] gap-8 w-full px-10">
             <aside className="w-full">
                 <Profile resultObject={resultObject}/>
             </aside>
