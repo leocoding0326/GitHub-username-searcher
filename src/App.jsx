@@ -30,13 +30,13 @@ const App = () => {
       return 
     }
     try {
-      const [userData, userRepos] = await Promise.all([
+      const [userData, userReposData] = await Promise.all([
         userResult(search),
         userRepos(search)
       ]);
 
       setResultObject(userData);
-      setReposObject(userRepos)
+      setReposObject(userReposData)
       setResultsDisplay(true);
     }
     catch(err) {
@@ -49,7 +49,7 @@ const App = () => {
     setResultObject(null)
   };
 
-  console.log(resultObject)
+  console.log(reposObject)
   return (
     <div>
       <header>
