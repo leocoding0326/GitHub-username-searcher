@@ -46,7 +46,8 @@ const App = () => {
 
   const onClear = () => {
     setResultsDisplay(false);
-    setResultObject(null)
+    setResultObject(null);
+    setReposObject(null)
   };
 
   console.log(reposObject)
