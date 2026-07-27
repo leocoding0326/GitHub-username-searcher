@@ -1,4 +1,5 @@
 import ReposMenu from "./ReposMenu";
+import OverviewTab from "./OverviewTab";
 
 const [navChoice, setNavChoice] = useState('overview');
 
@@ -11,6 +12,7 @@ const UserRepos = () => {
     return (
         <div>
             <ReposMenu chooseTab = {handleNavChoice} current = {navChoice}/>
+            <OverviewTab />
         </div>
     );
 };
