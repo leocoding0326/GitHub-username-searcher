@@ -1,4 +1,5 @@
 const ReposMenu = () => {
+    return (
     <ul>
         <li>
             <button>Overview</button>
@@ -10,6 +11,7 @@ const ReposMenu = () => {
             <button>Pinned Repos</button>
         </li>
     </ul>
-}
+    );
+};
 
 export default ReposMenu;
