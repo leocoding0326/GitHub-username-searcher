@@ -52,3 +52,23 @@
     z-index: -1;
   }
 }
+
+@layer components {
+  .tabs {
+    @apply flex border-b border-gray-300;
+  }
+
+  .tab-link {
+    @apply relative px-4 py-2 ;
+  }
+
+  .tab-link::after {
+    content: "";
+    @apply absolute left-0 bottom-[-1px] h-[2px] bg-digital-blue-300 transition-all duration-300;
+    width: 0;
+  }
+  .tab-link:hover::after,
+  .tab-link.active::after {
+    width: 100%;
+  }
+}
