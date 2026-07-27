@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import userSearch from './api/userSearch.js';
 import SearchAutoComplete from './components/hero/SearchAutoComplete.jsx';
 import userResult from './api/userResult.js';
+import userRepos from './api/userRepos.js';
 import NavBar from './components/NavBar/NavBar.jsx';
 import Discover from './components/Discover/Discover.jsx';
 import Footer from './components/Footer/Footer.jsx';
@@ -12,6 +13,7 @@ const App = () => {
   const [resultDisplay, setResultsDisplay] = useState(false);//Checks if results is dislpayed
   const [search, setSearch] = useState('');//Search bar values
   const [resultObject, setResultObject] = useState(null);//Return Result Object
+  const [reposObject, setReposObject] = useState(null)
   const [users, setUsers] = useState([]);// Controls arrays of suggestions
   const [popularUsers, setPopularUsers] = useState([
   "torvalds",
@@ -27,10 +29,19 @@ const App = () => {
     if(search.trim() === '') {
       return 
     }
+    try {
+      const [userData, userRepos] = await Promise.all([
+        userResult(search),
+        userRepos(search)
+      ]);
 
-    const result = await userResult(search);
-    setResultObject(result);
-    setResultsDisplay(true);
+      setResultObject(userData);
+      setReposObject(userRepos)
+      setResultsDisplay(true);
+    }
+    catch(err) {
+      console.log(err)
+    };
   };
 
   const onClear = () => {

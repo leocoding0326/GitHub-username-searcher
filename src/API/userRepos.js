@@ -1,4 +1,4 @@
-const userResult = async (username) => {
+const userRepos = async (username) => {
     
     if(!username) {
         return 
@@ -15,4 +15,6 @@ const userResult = async (username) => {
         }
 
         return response.json();
-}
+};
+
+export default userRepos;
