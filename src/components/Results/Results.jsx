@@ -1,4 +1,5 @@
 import Profile from "./ResultsProfile/Profile";
+import ReposMenu from "./UserRepos/ReposMenu";
 import UserStats from "./UserStats/UserStats";
 
 
@@ -10,6 +11,7 @@ const Results = ({resultObject}) => {
             </aside>
             <section>
                 <UserStats followers={resultObject.followers} following={resultObject.following} gists={resultObject.public_gists} repos={resultObject.public_repos} org={resultObject.company}/>
+                <ReposMenu />
             </section>
         </div>
     );

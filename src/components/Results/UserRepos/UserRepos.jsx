@@ -1,7 +1,9 @@
+import ReposMenu from "./ReposMenu";
+
 const UserRepos = () => {
     return (
         <div>
-
+            <ReposMenu />
         </div>
     );
 };
