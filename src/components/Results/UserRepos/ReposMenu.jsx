@@ -1,14 +1,19 @@
-const ReposMenu = () => {
+const ReposMenu = ({chooseTab, current}) => {
     return (
     <ul className="flex gap-6 w-full tabs">
         <li>
-            <button className="tab-link hover:bg-digital-blue-50 transition-colors rounded-md">Overview</button>
+            <button 
+            className={`tab-link hover:bg-digital-blue-50 transition-colors rounded-md 
+            ${current === 'overview' ? 'active' : ''}`}
+            onClick={chooseTab}>Overview</button>
         </li>
         <li>
-            <button className="tab-link hover:bg-digital-blue-50 transition-colors rounded-md">Repositories</button>
+            <button 
+            className={`tab-link hover:bg-digital-blue-50 transition-colors rounded-md 
+            ${current === 'repositories' ? 'active' : ''}`} onClick={chooseTab}>Repositories</button>
         </li>
         <li>
-            <button className="tab-link hover:bg-digital-blue-50 transition-colors rounded-md">Pinned Repos</button>
+            <button className={`tab-link hover:bg-digital-blue-50 transition-colors rounded-md ${current === 'pinned repos' ? 'active' : ''}`}>Pinned Repos</button>
         </li>
     </ul>
     );
