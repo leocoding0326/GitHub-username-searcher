@@ -2,7 +2,6 @@ import Profile from "./ResultsProfile/Profile";
 import ReposMenu from "./UserRepos/ReposMenu";
 import UserStats from "./UserStats/UserStats";
 
-
 const Results = ({resultObject}) => {
     return (
         <div className="grid grid-cols-1 min-[1200px]:grid-cols-[20%_70%] gap-8 w-full px-10">
