@@ -3,16 +3,13 @@ const userResult = async (inputSubmitted) => {
     const endPoint = `/users/${inputSubmitted}`;
     const urlToFecth = baseUrl + endPoint;
 
-    try {
         const response = await fetch(urlToFecth);
 
-        const result = await response.json();
-        
-        return result
+        if(!response.ok) {
+            throw new Error(`User not fund ${response.status}`)
+        }
 
-    } catch (error) {
-        console.log(error)
-    }
+        return response.json();
 }
 
 export default userResult;
