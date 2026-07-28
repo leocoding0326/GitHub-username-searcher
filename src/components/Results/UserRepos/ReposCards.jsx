@@ -2,7 +2,7 @@ import { BookMarked, FileBraces, Star, GitFork } from 'lucide-react';
 
 const ReposCards = () => {
     return (
-        <div className="w-full h-auto flex flex-col p-4">
+        <div className="bg-slate-100 w-full h-auto flex flex-col p-4 border border-digital-blue-100 shadow-sm rounded-md">
             <div className='flex'>
                 <BookMarked />
                 <h5 className='flex-1 ml-2'>Spoon-Knife</h5>
