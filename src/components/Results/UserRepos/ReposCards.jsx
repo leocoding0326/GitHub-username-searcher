@@ -6,7 +6,7 @@ const ReposCards = () => {
             <div className='flex items-center'>
                 <BookMarked />
                 <h5 className='flex-1 ml-2 text-lg'>Spoon-Knife</h5>
-                <div>Public</div>
+                <div className='text-sm bg-green-600 px-2 py-1 rounded-xl text-white'>Public</div>
             </div>
             <p className='py-4'>This repo is for demonstration purposes only</p>
             <div className='flex justify-around'>
