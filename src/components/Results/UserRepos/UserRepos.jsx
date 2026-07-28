@@ -7,6 +7,8 @@ const UserRepos = ({reposObject}) => {
 
     const [navChoice, setNavChoice] = useState('overview');
 
+    const overviewRepos = reposObject.slice(0, 6)
+
     const handleNavChoice = (e) => {
         const tab = e.currentTarget.textContent.trim().toLowerCase();
         setNavChoice(tab);
