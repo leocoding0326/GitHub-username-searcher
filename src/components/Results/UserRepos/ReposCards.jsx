@@ -3,9 +3,9 @@ import { BookMarked, FileBraces, Star, GitFork } from 'lucide-react';
 const ReposCards = () => {
     return (
         <div className="bg-slate-100 w-full h-auto flex flex-col p-4 border border-digital-blue-100 shadow-sm rounded-md">
-            <div className='flex'>
+            <div className='flex items-center'>
                 <BookMarked />
-                <h5 className='flex-1 ml-2'>Spoon-Knife</h5>
+                <h5 className='flex-1 ml-2 text-lg'>Spoon-Knife</h5>
                 <div>Public</div>
             </div>
             <p className='py-4'>This repo is for demonstration purposes only</p>
