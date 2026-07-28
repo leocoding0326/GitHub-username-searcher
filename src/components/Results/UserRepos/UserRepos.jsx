@@ -17,7 +17,7 @@ const UserRepos = ({reposObject}) => {
     return (
         <div>
             <ReposMenu chooseTab = {handleNavChoice} current = {navChoice}/>
-            <OverviewTab />
+            <OverviewTab object={overviewRepos}/>
         </div>
     );
 };
