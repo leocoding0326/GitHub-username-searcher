@@ -3,7 +3,7 @@ import OverviewTab from "./OverviewTab";
 import { useState } from "react";
 
 
-const UserRepos = () => {
+const UserRepos = ({reposObject}) => {
 
     const [navChoice, setNavChoice] = useState('overview');
 
