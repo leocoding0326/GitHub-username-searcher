@@ -9,7 +9,7 @@ const ReposCards = () => {
                 <div>Public</div>
             </div>
             <p className='py-4'>This repo is for demonstration purposes only</p>
-            <div>
+            <div className='flex justify-around'>
                 <p className='flex items-center'><FileBraces size={20}/> JavaScript</p>
                 <p className='flex items-center'><Star size={20}/>1.6k</p>
                 <p className='flex items-center'><GitFork size={20}/>300</p>
