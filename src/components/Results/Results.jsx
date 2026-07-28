@@ -8,7 +8,7 @@ const Results = ({resultObject, reposObject}) => {
             <aside className="w-full">
                 <Profile resultObject={resultObject}/>
             </aside>
-            <section>
+            <section className="flex flex-col gap-4">
                 <UserStats followers={resultObject.followers} following={resultObject.following} gists={resultObject.public_gists} repos={resultObject.public_repos} org={resultObject.company}/>
                 <UserRepos reposObject={reposObject}/>
             </section>
