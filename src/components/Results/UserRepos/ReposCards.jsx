@@ -1,9 +1,11 @@
+import { BookMarked } from 'lucide-react';
+
 const ReposCards = () => {
     return (
         <div className="w-full h-auto">
             <div>
-                <h5>Spoon-Knife</h5>
-                <div>public</div>
+                <h5><BookMarked /> Spoon-Knife</h5>
+                <div>Public</div>
             </div>
             <p>This repo is for demonstration purposes only</p>
             <div>
