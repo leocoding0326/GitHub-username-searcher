@@ -1,4 +1,4 @@
-import { BookMarked } from 'lucide-react';
+import { BookMarked, FileBraces, Star, GitFork } from 'lucide-react';
 
 const ReposCards = () => {
     return (
@@ -10,9 +10,9 @@ const ReposCards = () => {
             </div>
             <p className='py-4'>This repo is for demonstration purposes only</p>
             <div>
-                <p>JavaScript</p>
-                <p>1.6k</p>
-                <p>300</p>
+                <p className='flex items-center'><FileBraces size={20}/> JavaScript</p>
+                <p className='flex items-center'><Star size={20}/>1.6k</p>
+                <p className='flex items-center'><GitFork size={20}/>300</p>
             </div>
         </div>
     );
