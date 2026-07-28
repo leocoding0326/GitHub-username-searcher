@@ -1,4 +1,4 @@
-import ReposCards from "./reposCard";
+import ReposCards from "./ReposCards";
 
 const OverviewTab = () => {
     return (
