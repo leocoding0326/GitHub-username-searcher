@@ -15,7 +15,7 @@ const UserRepos = ({reposObject}) => {
     };
 
     return (
-        <div>
+        <div className="p-4 border border-digital-blue-100 shadow-sm rounded-md bg-slate-50">
             <ReposMenu chooseTab = {handleNavChoice} current = {navChoice}/>
             <OverviewTab object={overviewRepos}/>
         </div>
