@@ -3,6 +3,7 @@ import userSearch from './api/userSearch.js';
 import SearchAutoComplete from './components/hero/SearchAutoComplete.jsx';
 import userResult from './api/userResult.js';
 import userRepos from './api/userRepos.js';
+import userOrg from './api/userOrg.js';
 import NavBar from './components/NavBar/NavBar.jsx';
 import Discover from './components/Discover/Discover.jsx';
 import Footer from './components/Footer/Footer.jsx';
@@ -13,6 +14,7 @@ const App = () => {
   const [resultDisplay, setResultsDisplay] = useState(false);//Checks if results is dislpayed
   const [search, setSearch] = useState('');//Search bar values
   const [resultObject, setResultObject] = useState(null);//Return Result Object
+  const [organizations, setOrganizations] = useState(null)
   const [reposObject, setReposObject] = useState(null)
   const [users, setUsers] = useState([]);// Controls arrays of suggestions
   const [popularUsers, setPopularUsers] = useState([
@@ -32,11 +34,14 @@ const App = () => {
     try {
       const [userData, userReposData] = await Promise.all([
         userResult(search),
-        userRepos(search)
+        userRepos(search),
       ]);
 
+      const orgData = await userOrg(userData.organizations_url);
+
       setResultObject(userData);
-      setReposObject(userReposData)
+      setReposObject(userReposData);
+      setOrganizations(orgData);
       setResultsDisplay(true);
     }
     catch(err) {
@@ -50,7 +55,7 @@ const App = () => {
     setReposObject(null)
   };
 
-  console.log(resultObject)
+  console.log(organizations)
   return (
     <div>
       <header>

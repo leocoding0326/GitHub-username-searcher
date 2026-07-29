@@ -1,5 +1,5 @@
 const userOrg = async (orgUrl) => {
-    if(!username) {
+    if(!orgUrl) {
         return
     }
 

@@ -1,11 +1,5 @@
 const ReposMenu = ({chooseTab, current}) => {
 
-    console.log({
-    current,
-    overview: current === 'overview',
-    repositories: current === 'repositories',
-    pinned: current === 'pinned repos'
-});
     return (
     <ul className="flex gap-6 w-full tabs">
         <li>
