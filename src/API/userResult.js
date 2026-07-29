@@ -1,4 +1,5 @@
 const userResult = async (inputSubmitted) => {
+    
     const baseUrl = 'https://api.github.com';
     const endPoint = `/users/${inputSubmitted}`;
     const urlToFecth = baseUrl + endPoint;

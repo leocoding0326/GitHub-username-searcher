@@ -50,7 +50,7 @@ const App = () => {
     setReposObject(null)
   };
 
-  console.log(reposObject)
+  console.log(resultObject)
   return (
     <div>
       <header>
