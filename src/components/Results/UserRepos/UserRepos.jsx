@@ -1,6 +1,7 @@
 import ReposMenu from "./ReposMenu";
-import OverviewTab from "./RederRepos";
+import OverviewTab from "./RenderRepos";
 import { useState } from "react";
+import RenderRepos from "./RenderRepos";
 
 
 const UserRepos = ({reposObject}) => {
@@ -17,7 +18,8 @@ const UserRepos = ({reposObject}) => {
     return (
         <div className="p-4 border border-digital-blue-100 shadow-sm rounded-md bg-slate-50">
             <ReposMenu chooseTab = {handleNavChoice} current = {navChoice}/>
-            {navChoice==='overview' && <OverviewTab object={overviewRepos}/>}
+            {navChoice==='overview' && <RenderRepos object={overviewRepos}/>}
+            {navChoice==='repositories' && <RenderRepos object={reposObject}/>}
         </div>
     );
 };

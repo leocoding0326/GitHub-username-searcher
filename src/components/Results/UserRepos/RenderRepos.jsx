@@ -1,8 +1,8 @@
 import ReposCards from "./ReposCards";
 
-const OverviewTab = ({object}) => {
+const RenderRepos = ({object}) => {
     return (
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-6 p-6">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-6 p-6">
             {object.map((repo=> {
                return <ReposCards 
                key={repo.id} 
@@ -17,4 +17,4 @@ const OverviewTab = ({object}) => {
     );
 };
 
-export default OverviewTab;
+export default RenderRepos;
