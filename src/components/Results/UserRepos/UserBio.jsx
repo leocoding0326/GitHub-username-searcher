@@ -1,7 +1,7 @@
 const UserBio = ({resultObject}) => {
     return (
         <div>
-            <p className="py-8">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic quisquam nesciunt tempore ut amet inventore voluptatem minus, explicabo, rerum, cupiditate est quibusdam. Placeat incidunt, exercitationem sint maiores rerum quaerat ut!</p>
+            <p className="py-8">{resultObject.bio}</p>
         </div>
     );
 };

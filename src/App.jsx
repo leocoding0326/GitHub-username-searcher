@@ -51,7 +51,7 @@ const App = () => {
   };
 
 
-  console.log(reposObject)
+  console.log(resultObject)
   return (
     <div>
       <header>
