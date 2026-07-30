@@ -1,11 +1,10 @@
 import ReposMenu from "./ReposMenu";
-import OverviewTab from "./RenderRepos";
 import { useState } from "react";
 import RenderRepos from "./RenderRepos";
-import { Heading4 } from "lucide-react";
+import UserBio from "./UserBio";
 
 
-const UserRepos = ({reposObject}) => {
+const UserRepos = ({reposObject, resultObject}) => {
 
     const [navChoice, setNavChoice] = useState('overview');
 
@@ -24,6 +23,7 @@ const UserRepos = ({reposObject}) => {
             <ReposMenu chooseTab = {handleNavChoice} current = {navChoice}/>
             {navChoice==='overview' && <h4 className="p-4 text-xl border-b border-gray-200 font-bold">Top Repos</h4>}
             {navChoice==='overview' && <RenderRepos object={overviewRepos}/>}
+            {navChoice==='overview' && <UserBio resultObject={resultObject}/>}
             {navChoice==='repositories' && <RenderRepos object={reposObject}/>}
         </div>
     );

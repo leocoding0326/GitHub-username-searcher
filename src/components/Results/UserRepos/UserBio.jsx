@@ -1,7 +1,7 @@
-const UserBio = () => {
+const UserBio = ({resultObject}) => {
     return (
         <div>
-            
+
         </div>
     );
 };

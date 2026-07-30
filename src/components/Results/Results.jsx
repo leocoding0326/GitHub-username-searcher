@@ -10,7 +10,7 @@ const Results = ({resultObject, reposObject}) => {
             </aside>
             <section className="flex flex-col gap-4">
                 <UserStats followers={resultObject.followers} following={resultObject.following} gists={resultObject.public_gists} repos={resultObject.public_repos} org={resultObject.company}/>
-                <UserRepos reposObject={reposObject}/>
+                <UserRepos reposObject={reposObject} resultObject={resultObject}/>
             </section>
         </div>
     );
