@@ -22,7 +22,7 @@ const UserRepos = ({reposObject}) => {
     return (
         <div className="p-4 border border-digital-blue-100 shadow-sm rounded-md bg-slate-50">
             <ReposMenu chooseTab = {handleNavChoice} current = {navChoice}/>
-            {navChoice==='overview' && <h4 className="p-4 text-xl border-b border-gray-300">Top Repos</h4>}
+            {navChoice==='overview' && <h4 className="p-4 text-xl border-b border-gray-200 font-bold">Top Repos</h4>}
             {navChoice==='overview' && <RenderRepos object={overviewRepos}/>}
             {navChoice==='repositories' && <RenderRepos object={reposObject}/>}
         </div>
