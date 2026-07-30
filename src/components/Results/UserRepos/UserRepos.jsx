@@ -8,7 +8,10 @@ const UserRepos = ({reposObject}) => {
 
     const [navChoice, setNavChoice] = useState('overview');
 
-    const overviewRepos = reposObject.slice(0, 6)
+    const overviewRepos = reposObject
+    .sort((a, b) => b.stargazers_count - a.stargazers_count)
+    .slice(0, 2);
+    
 
     const handleNavChoice = (e) => {
         const tab = e.currentTarget.textContent.trim().toLowerCase();
