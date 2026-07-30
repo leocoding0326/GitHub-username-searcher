@@ -29,6 +29,9 @@ const App = () => {
     if(search.trim() === '') {
       return 
     }
+
+    setUsers([]);
+
     try {
       const [userData, userReposData] = await Promise.all([
         userResult(search),
