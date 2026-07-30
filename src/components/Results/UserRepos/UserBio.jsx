@@ -1,7 +1,7 @@
 const UserBio = () => {
     return (
         <div>
-
+            
         </div>
     );
 };
