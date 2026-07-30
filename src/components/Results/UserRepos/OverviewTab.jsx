@@ -4,9 +4,10 @@ import RenderRepos from "./RenderRepos"
 
 const OverviewTab = ({resultObject, object}) => {
     return (
-    <div>
+    <div className="p-6">
+        <h4 className="pb-2 text-xl border-b border-gray-200 font-bold">About</h4>
         <UserBio resultObject={resultObject}/>
-        <h4 className="p-4 text-xl border-b border-gray-200 font-bold">Top Repos</h4>
+        <h4 className="my-4 pb-2 text-xl border-b border-gray-200 font-bold">Top Repos</h4>
         <RenderRepos object={object}/>
     </div>
     );
