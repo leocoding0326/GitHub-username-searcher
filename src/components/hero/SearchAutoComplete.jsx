@@ -94,6 +94,7 @@ const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setS
                 handleClear = {handleClearClick}
                 inputRef={inputRef}
                 onSubmit={onSubmit}/>
+                
             <Tip />
             </div>
             <div>    
