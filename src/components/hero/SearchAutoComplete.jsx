@@ -27,7 +27,7 @@ const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setS
                    setLoading(false)
                 };
 
-            }, 300),
+            }, 600),
             [searchFunction]
     );
 
@@ -50,15 +50,6 @@ const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setS
         };
         debouncedSearch(value);
         setLoading(true);
-    };
-
-    const handleSubmit = (e) => {
-    console.log('submited')
-    debouncedSearch.cancel(); // Cancel any pending search
-    setUsers([]);             // Clear suggestions
-    setHasTyped(false);       // Hide the dropdown
-
-    onSubmit(e);              // Call the parent's search function
     };
 
     
@@ -95,7 +86,7 @@ const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setS
     }, []);
 
     return (
-        <div ref={searchContainerRef} className='h-[40vh] flex flex-col justify-center sm:min-w-[80%] mx-4'>
+        <div ref={searchContainerRef} className='sm:h-[40vh] flex flex-col justify-center sm:min-w-[80%] mx-4'>
             <HeroTitle />
             <div>
             <SearchBar 
@@ -103,8 +94,7 @@ const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setS
                 search={search} 
                 handleClear = {handleClearClick}
                 inputRef={inputRef}
-                onSubmit={handleSubmit}/>
-                
+                onSubmit={onSubmit}/>
             <Tip />
             </div>
             <div>    
