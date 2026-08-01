@@ -74,10 +74,10 @@ const App = () => {
             setUsers={setUsers}
             hasTyped={hasTyped} setHasTyped = {setHasTyped}
           />
-
-         {/* <Discover popularArray={popularUsers} setSearch={setSearch} setUsers={setUsers}/> */}
-            {resultDisplay && <Results resultObject={resultObject} reposObject={reposObject}/>}
-          </div>
+            {resultDisplay ? (<Results resultObject={resultObject} reposObject={reposObject}/>):
+            <Discover popularArray={popularUsers} setSearch={setSearch} setUsers={setUsers}/>
+            }
+        </div>
       </main>
       
       <Footer />
