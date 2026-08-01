@@ -4,18 +4,12 @@ const userSearch = async (userInput) => {
     const query = `?q=${encodeURIComponent(userInput)}&per_page=5`;
     const urlToFetch = baseUrl + endPoint + query;
     
-    try {
         const response = await fetch(urlToFetch);
         if(!response.ok) {
-            console.log('Theres been an error')
-            return
+            throw new Error('Username not found')
         }
         const result = await response.json();
         return result.items;
-
-    } catch (error) {
-        console.log(error)
-    }
 }
 
 export default userSearch;

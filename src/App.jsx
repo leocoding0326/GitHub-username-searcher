@@ -11,6 +11,7 @@ import Results from './components/Results/Results.jsx';
 const App = () => {
 
   const [resultDisplay, setResultsDisplay] = useState(false);//Checks if results is dislpayed
+  const [hasTyped, setHasTyped] = useState(false)
   const [search, setSearch] = useState('');//Search bar values
   const [resultObject, setResultObject] = useState(null);//Return Result Object
   const [reposObject, setReposObject] = useState(null)
@@ -38,7 +39,8 @@ const App = () => {
       setResultObject(userData);
       setReposObject(userReposData);
       setResultsDisplay(true);
-      setUsers([])
+      setUsers([]);
+      setHasTyped(false)
     }
     catch(err) {
       console.log(err)
@@ -48,7 +50,8 @@ const App = () => {
   const onClear = () => {
     setResultsDisplay(false);
     setResultObject(null);
-    setReposObject(null)
+    setReposObject(null);
+    setHasTyped(false);
   };
 
 
@@ -69,6 +72,7 @@ const App = () => {
             onSubmit = {handleOnSearch}
             users={users}
             setUsers={setUsers}
+            hasTyped={hasTyped} setHasTyped = {setHasTyped}
           />
 
          {/* <Discover popularArray={popularUsers} setSearch={setSearch} setUsers={setUsers}/> */}
