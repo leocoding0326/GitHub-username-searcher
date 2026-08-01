@@ -38,6 +38,7 @@ const App = () => {
       setResultObject(userData);
       setReposObject(userReposData);
       setResultsDisplay(true);
+      setUsers([])
     }
     catch(err) {
       console.log(err)
@@ -51,7 +52,7 @@ const App = () => {
   };
 
 
-  console.log(resultObject)
+  console.log(users)
   return (
     <div>
       <header>
