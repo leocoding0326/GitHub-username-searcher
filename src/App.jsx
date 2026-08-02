@@ -11,7 +11,7 @@ import Results from './components/Results/Results.jsx';
 const App = () => {
 
   const [resultDisplay, setResultsDisplay] = useState(false);//Checks if results is dislpayed
-  const [userNotFund, setUserNotFund] = useState(false);
+  const [userNotFound, setuserNotFound] = useState(false);
   const [hasTyped, setHasTyped] = useState(false)
   const [search, setSearch] = useState('');//Search bar values
   const [resultObject, setResultObject] = useState(null);//Return Result Object
@@ -41,11 +41,11 @@ const App = () => {
       setResultsDisplay(true);
       setUsers([]);
       setHasTyped(false);
-      setUserNotFund(false)
+      setuserNotFound(false)
     }
     catch(err) {
       console.log(err)
-      setUserNotFund(true)
+      setuserNotFound(true)
     };
   };
 
@@ -54,11 +54,11 @@ const App = () => {
     setResultObject(null);
     setReposObject(null);
     setHasTyped(false);
-    setUserNotFund(false)
+    setuserNotFound(false)
   };
 
 
-  console.log(userNotFund)
+  console.log(userNotFound)
   return (
     <div>
       <header>
@@ -78,7 +78,7 @@ const App = () => {
             hasTyped={hasTyped} setHasTyped = {setHasTyped}
           />
             {resultDisplay ? (<Results resultObject={resultObject} reposObject={reposObject}/>):
-            <Discover popularArray={popularUsers} setSearch={setSearch} setUsers={setUsers}/>
+            <Discover popularArray={popularUsers} setSearch={setSearch} setUsers={setUsers} userNotFound={userNotFound}/>
             }
         </div>
       </main>
