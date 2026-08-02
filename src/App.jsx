@@ -11,6 +11,7 @@ import Results from './components/Results/Results.jsx';
 const App = () => {
 
   const [resultDisplay, setResultsDisplay] = useState(false);//Checks if results is dislpayed
+  const [userNotFund, setUserNotFund] = useState(false);
   const [hasTyped, setHasTyped] = useState(false)
   const [search, setSearch] = useState('');//Search bar values
   const [resultObject, setResultObject] = useState(null);//Return Result Object
@@ -26,7 +27,6 @@ const App = () => {
 
   const handleOnSearch = async (e) => {
     e.preventDefault()
-    
     if(search.trim() === '') {
       return 
     }
@@ -40,10 +40,12 @@ const App = () => {
       setReposObject(userReposData);
       setResultsDisplay(true);
       setUsers([]);
-      setHasTyped(false)
+      setHasTyped(false);
+      setUserNotFund(false)
     }
     catch(err) {
       console.log(err)
+      setUserNotFund(true)
     };
   };
 
@@ -52,10 +54,11 @@ const App = () => {
     setResultObject(null);
     setReposObject(null);
     setHasTyped(false);
+    setUserNotFund(false)
   };
 
 
-  console.log(users)
+  console.log(userNotFund)
   return (
     <div>
       <header>
