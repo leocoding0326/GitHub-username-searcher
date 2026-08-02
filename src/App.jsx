@@ -29,10 +29,10 @@ const App = () => {
 
   const handleOnSearch = async (e) => {
     e.preventDefault()
-    setResultLoading(true)
     if(search.trim() === '') {
       return 
     }
+    setResultLoading(true)
     try {
       const [userData, userReposData] = await Promise.all([
         userResult(search),
@@ -66,7 +66,7 @@ const App = () => {
   };
 
 
-  console.log(userNotFound)
+  console.log(resultLoading)
   return (
     <div>
       <header>
@@ -85,8 +85,13 @@ const App = () => {
             setUsers={setUsers}
             hasTyped={hasTyped} setHasTyped = {setHasTyped}
           />
-            {resultDisplay ? (<Results resultObject={resultObject} reposObject={reposObject}/>):
-            <Discover popularArray={popularUsers} setSearch={setSearch} setUsers={setUsers} userNotFound={userNotFound}/>
+            {resultLoading ? (
+              <LoadingResult />
+            ) : resultDisplay ? (
+              < Results resultObject={resultObject} reposObject={reposObject}/>
+            ) : (
+              <Discover popularArray={popularUsers} setSearch={setSearch} setUsers={setUsers} userNotFound={userNotFound}/>
+            )
             }
         </div>
       </main>
