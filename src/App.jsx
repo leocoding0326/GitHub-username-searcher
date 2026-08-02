@@ -46,6 +46,7 @@ const App = () => {
     catch(err) {
       console.log(err)
       setuserNotFound(true)
+      setHasTyped(false);
     };
   };
 
