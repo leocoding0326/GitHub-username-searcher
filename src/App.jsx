@@ -45,8 +45,9 @@ const App = () => {
     }
     catch(err) {
       console.log(err)
-      setuserNotFound(true)
+      setuserNotFound(true);
       setHasTyped(false);
+      setResultsDisplay(false)
     };
   };
 
