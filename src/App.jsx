@@ -7,10 +7,12 @@ import NavBar from './components/NavBar/NavBar.jsx';
 import Discover from './components/Discover/Discover.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import Results from './components/Results/Results.jsx';
+import LoadingResult from './components/LoadingResult.jsx';
 
 const App = () => {
 
   const [resultDisplay, setResultsDisplay] = useState(false);//Checks if results is dislpayed
+  const [resultLoading, setResultLoading] = useState(false)
   const [userNotFound, setuserNotFound] = useState(false);
   const [hasTyped, setHasTyped] = useState(false)
   const [search, setSearch] = useState('');//Search bar values
@@ -27,6 +29,7 @@ const App = () => {
 
   const handleOnSearch = async (e) => {
     e.preventDefault()
+    setResultLoading(true)
     if(search.trim() === '') {
       return 
     }
@@ -48,7 +51,10 @@ const App = () => {
       setuserNotFound(true);
       setHasTyped(false);
       setResultsDisplay(false)
-    };
+    }
+    finally {
+      setResultLoading(false)
+    }
   };
 
   const onClear = () => {
@@ -91,3 +97,4 @@ const App = () => {
 } 
 
 export default App;
+
