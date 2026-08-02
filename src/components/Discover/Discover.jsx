@@ -3,6 +3,7 @@ import DiscoverText from "./DiscoverTexts";
 import Divider from "../Divider";
 import PopularSearches from "./PopularSearches";
 import discoverImg from "../../assets/discoverImg.svg";
+import notFoundImg from "../../assets/notFoundImg.svg"
 
 const Discover = ({popularArray, setSearch, setUsers, userNotFund}) => {
     return (
