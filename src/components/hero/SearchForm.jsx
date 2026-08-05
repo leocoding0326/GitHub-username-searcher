@@ -8,6 +8,7 @@ const SearchForm = ({onSubmit}) => {
     const {
         register,
         handleSubmit,
+        reset,
         formState: {errors, isSubmitting}
     } = useForm()
 
@@ -25,7 +26,7 @@ const SearchForm = ({onSubmit}) => {
                 ? <Tip /> 
                 : <div>{errors.username.message}</div>}
             <SearchButton isSubmitting={isSubmitting}/>
-            <ClearButton />
+            <ClearButton onClear = {() => reset()}/>
         </form>
     );
 };
