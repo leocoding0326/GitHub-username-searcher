@@ -6,12 +6,13 @@ const SearchForm = ({onSubmit}) => {
 
     const {
         register,
-        handleSubmit
+        handleSubmit,
+        formState: {errors, isSubmitting}
     } = useForm()
 
 
     return (
-        <form>
+        <form onSubmit={handleSubmit(onSubmit)}>
             <input type="text" 
             {...register(
                 'username',{
