@@ -1,12 +1,10 @@
 import {useState, useMemo, useEffect, useRef} from 'react';
-import SearchBar from './SearchBar';
 import SuggestionList from './SuggestionList';
 import debounce from "lodash.debounce";
 import HeroTitle from './HeroTitle';
-import Tip from './Tip';
 import SearchForm from './SearchForm';
 
-const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setSearch, onSubmit, users, setUsers, hasTyped, setHasTyped}) => {
+const SearchAutoComplete = ({searchFunction, getLabel, search, setSearch, onSubmit, users, setUsers, hasTyped, setHasTyped}) => {
 
     const [loading, setLoading] = useState(false);
     const inputRef = useRef(null)
@@ -60,12 +58,6 @@ const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setS
         setUsers([]);
     };
 
-    const handleClearClick = () => {
-        setUsers([]);
-        setSearch('');
-        clearResult();
-        setHasTyped(false);
-    }
 
     useEffect(() => {
         const handleClickOutside = (e) => {
@@ -90,12 +82,6 @@ const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setS
             <HeroTitle />
             <div>
                 <SearchForm onSubmit = {onSubmit}/>
-            {/*<SearchBar 
-                onSearch = {handleChange} 
-                search={search} 
-                handleClear = {handleClearClick}
-                inputRef={inputRef}
-                onSubmit={onSubmit}/>*/}
             </div>
             <div>    
                 <SuggestionList 

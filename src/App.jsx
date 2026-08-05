@@ -74,7 +74,6 @@ const App = () => {
           <SearchAutoComplete 
             searchFunction={userSearch}
             getLabel={(user) => user.login}
-            clearResult={onClear}
             search={search}
             setSearch={setSearch}
             onSubmit = {handleOnSearch}
