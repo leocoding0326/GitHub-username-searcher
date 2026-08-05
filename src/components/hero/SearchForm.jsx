@@ -1,6 +1,7 @@
+import { useForm } from "react-hook-form";
 import ClearButton from "./ClearButton";
 import SearchButton from "./SearchButton";
-import { useForm } from "react-hook-form";
+import Tip from "./Tip";
 
 const SearchForm = ({onSubmit}) => {
 
@@ -19,7 +20,10 @@ const SearchForm = ({onSubmit}) => {
                 required: 'Please enter a valid username',
                 }
             )}/>
-            <SearchButton />
+            {!errors.username 
+                ? <Tip /> 
+                : <div>{errors.username.message}</div>}
+            <SearchButton isSubmitting={isSubmitting}/>
             <ClearButton />
         </form>
     );
