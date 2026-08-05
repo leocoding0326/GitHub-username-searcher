@@ -4,6 +4,7 @@ import SuggestionList from './SuggestionList';
 import debounce from "lodash.debounce";
 import HeroTitle from './HeroTitle';
 import Tip from './Tip';
+import SearchForm from './SearchForm';
 
 const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setSearch, onSubmit, users, setUsers, hasTyped, setHasTyped}) => {
 
@@ -88,12 +89,14 @@ const SearchAutoComplete = ({searchFunction, getLabel, clearResult, search, setS
         <div ref={searchContainerRef} className='sm:h-[40vh] flex flex-col justify-center sm:min-w-[80%] mx-4 py-6'>
             <HeroTitle />
             <div>
-            <SearchBar 
+                <SearchForm onSubmit = {onSubmit}/>
+            {/*<SearchBar 
                 onSearch = {handleChange} 
                 search={search} 
                 handleClear = {handleClearClick}
                 inputRef={inputRef}
-                onSubmit={onSubmit}/>
+                onSubmit={onSubmit}/>*/}
+            
                 
             <Tip />
             </div>

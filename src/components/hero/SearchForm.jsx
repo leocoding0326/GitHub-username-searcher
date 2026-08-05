@@ -2,7 +2,7 @@ import ClearButton from "./ClearButton";
 import SearchButton from "./SearchButton";
 import { useForm } from "react-hook-form";
 
-const SearchForm = () => {
+const SearchForm = ({onSubmit}) => {
 
     const {
         register,

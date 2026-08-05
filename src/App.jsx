@@ -28,10 +28,10 @@ const App = () => {
 ]); //Mocks a small database to use in popular searches
 
   const handleOnSearch = async (e) => {
-    e.preventDefault()
+    {/*e.preventDefault()
     if(search.trim() === '') {
       return 
-    }
+    }*/}
     setResultLoading(true)
     try {
       const [userData, userReposData] = await Promise.all([
