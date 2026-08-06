@@ -4,7 +4,7 @@ import { faCircleXmark } from '@fortawesome/free-solid-svg-icons'
 
 const ClearButton = ({ onClear }) => {
     
-    return <button type='button' onClick={onClear} className='absolute min-[375px]:right-28 right-15 text-gray-300 cursor-pointer hover:text-gray-500 transition-all'>
+    return <button type='button' onClick={onClear} className='absolute min-[375px]:right-32 right-15 text-gray-300 cursor-pointer hover:text-gray-500 transition-all'>
         <FontAwesomeIcon icon={faCircleXmark} />
     </button>
 };

@@ -15,8 +15,8 @@ const SearchForm = ({onSubmit}) => {
 
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className="relative flex flex-col gap-1 p-2 justify-center items-center">
-            <div className="flex w-full gap-2">
+        <form onSubmit={handleSubmit(onSubmit)} className="relative flex flex-col gap-1 p-2 justify-center">
+            <div className="flex w-full gap-2 items-center">
                     <input type="text" 
                     {...register(
                         'username',{
@@ -29,7 +29,7 @@ const SearchForm = ({onSubmit}) => {
             </div>
                 {!errors.username 
                     ? <Tip /> 
-                    : <div>{errors.username.message}</div>}
+                    : <div className="text-red-700 text-xs">{errors.username.message}</div>}
             
             
         </form>
