@@ -11,8 +11,12 @@ const SearchForm = ({onSubmit}) => {
         handleSubmit,
         reset,
         watch,
+        clearErrors,
         formState: {errors, isSubmitting}
-    } = useForm()
+    } = useForm({
+        mode: "onSubmit",
+        reValidateMode: 'onSubmit'
+    })
 
 
     return (
