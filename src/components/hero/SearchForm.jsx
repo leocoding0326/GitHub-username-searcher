@@ -3,19 +3,28 @@ import ClearButton from "./ClearButton";
 import SearchButton from "./SearchButton";
 import Tip from "./Tip";
 import {TriangleAlert} from "lucide-react";
+import {z} from 'zod';
+import { zodResolver } from "@hookform/resolvers/zod";
 
 const SearchForm = ({onSubmit}) => {
+
+    const inputSchema = z.object ({
+        username: z.string()
+        .min(1, 'Please enter an username')
+        .min(3, 'Username is too short')
+        .max(34, 'Github doesnt allow more than 34 characters')
+    });
 
     const {
         register,
         handleSubmit,
         reset,
         watch,
-        clearErrors,
         formState: {errors, isSubmitting}
     } = useForm({
         mode: "onSubmit",
-        reValidateMode: 'onSubmit'
+        reValidateMode: 'onSubmit',
+        resolver: zodResolver(inputSchema)
     })
 
 
@@ -32,7 +41,7 @@ const SearchForm = ({onSubmit}) => {
                     className={`border ${errors.username ? 'border-red-500' : 'border-gray-300'} rounded-md px-2 py-1 focus:outline-digital-blue-200 focus:outline-1 w-full bg-slate-50 flex-1`}/>
 
                     <SearchButton isSubmitting={isSubmitting}/>
-                    
+
                     {watch('username') && <ClearButton onClear = {() => reset()}/>}
             </div>
 
