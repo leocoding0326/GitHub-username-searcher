@@ -15,19 +15,23 @@ const SearchForm = ({onSubmit}) => {
 
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className="relative flex gap-1 p-2 justify-center items-center">
-            <input type="text" 
-            {...register(
-                'username',{
-                required: 'Please enter a valid username',
-                }
-            )}
-            className={`border border-gray-300 rounded-md px-2 py-1 focus:outline-digital-blue-200 focus:outline-1 flex-1 bg-slate-50`}/>
-            {!errors.username 
-                ? <Tip /> 
-                : <div>{errors.username.message}</div>}
-            <SearchButton isSubmitting={isSubmitting}/>
-           {watch('username') && <ClearButton onClear = {() => reset()}/>}
+        <form onSubmit={handleSubmit(onSubmit)} className="relative flex flex-col gap-1 p-2 justify-center items-center">
+            <div className="flex w-full gap-2">
+                    <input type="text" 
+                    {...register(
+                        'username',{
+                        required: 'Please enter a valid username',
+                        }
+                    )}
+                    className={`border border-gray-300 rounded-md px-2 py-1 focus:outline-digital-blue-200 focus:outline-1 w-full bg-slate-50 flex-1`}/>
+                    <SearchButton isSubmitting={isSubmitting}/>
+                    {watch('username') && <ClearButton onClear = {() => reset()}/>}
+            </div>
+                {!errors.username 
+                    ? <Tip /> 
+                    : <div>{errors.username.message}</div>}
+            
+            
         </form>
     );
 };
