@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import ClearButton from "./ClearButton";
 import SearchButton from "./SearchButton";
 import Tip from "./Tip";
+import {TriangleAlert} from "lucide-react";
 
 const SearchForm = ({onSubmit}) => {
 
@@ -20,7 +21,7 @@ const SearchForm = ({onSubmit}) => {
                     <input type="text" 
                     {...register(
                         'username',{
-                        required: 'Please enter a valid username',
+                        required: 'This field cannot be empty',
                         }
                     )}
                     className={`border ${errors.username ? 'border-red-500' : 'border-gray-300'} rounded-md px-2 py-1 focus:outline-digital-blue-200 focus:outline-1 w-full bg-slate-50 flex-1`}/>
@@ -29,7 +30,7 @@ const SearchForm = ({onSubmit}) => {
             </div>
                 {!errors.username 
                     ? <Tip /> 
-                    : <div className="text-red-500 text-xs">{errors.username.message}</div>}
+                    : <div className="text-red-500 text-xs flex gap-1 items-center"><TriangleAlert size={13}/>{errors.username.message}</div>}
             
             
         </form>
