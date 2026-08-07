@@ -1,6 +1,6 @@
 import LoadingBar from './LoadingBar'
 
-const SuggestionList = ({ data = [], dataHandler, isLoading, handleClick, search, hasTyped }) => {
+const SuggestionList = ({ data = [], dataHandler, isLoading, handleClick, hasTyped }) => {
     return (
         <ul className='absolute w-[80%] bg-white sm:w-[60%] [&>li]:p-5 shadow-sm transition-all rounded-md'>
             {isLoading ? (

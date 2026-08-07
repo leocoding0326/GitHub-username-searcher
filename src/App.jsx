@@ -54,15 +54,6 @@ const App = () => {
     }
   };
 
-  const onClear = () => {
-    setResultsDisplay(false);
-    setResultObject(null);
-    setReposObject(null);
-    setHasTyped(false);
-    setuserNotFound(false)
-  };
-
-
   console.log(resultObject)
   return (
     <div>

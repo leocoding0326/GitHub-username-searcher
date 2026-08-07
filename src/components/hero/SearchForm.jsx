@@ -46,8 +46,6 @@ const SearchForm = ({onSubmit}) => {
                 {!errors.username 
                     ? <Tip /> 
                     : <div className="text-red-500 text-xs flex gap-1 items-center"><TriangleAlert size={13}/>{errors.username.message}</div>}
-            
-            
         </form>
     );
 };
