@@ -1,5 +1,6 @@
 import { Combobox } from "@base-ui/react";
-import { useState } from "react";
+import { useState, useMemo, useEffect } from "react";
+import debounce from "lodash.debounce";
 import userSearch from "@/api/userSearch";
 
 const AutoComplete = () => {

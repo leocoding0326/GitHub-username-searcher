@@ -5,7 +5,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import ClearButton from "./ClearButton";
 import SearchButton from "./SearchButton";
 import Tip from "./Tip";
-import AutoComplete from "./AutoComplete";
 
 
 const SearchForm = ({onSubmit}) => {
@@ -47,7 +46,6 @@ const SearchForm = ({onSubmit}) => {
                 {!errors.username 
                     ? <Tip /> 
                     : <div className="text-red-500 text-xs flex gap-1 items-center"><TriangleAlert size={13}/>{errors.username.message}</div>}
-            <AutoComplete />
         </form>
 
     );

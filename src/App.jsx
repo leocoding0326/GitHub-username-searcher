@@ -8,6 +8,7 @@ import Discover from './components/Discover/Discover.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import Results from './components/Results/Results.jsx';
 import LoadingResult from './components/LoadingResult.jsx';
+import AutoComplete from './components/hero/AutoComplete.jsx';
 
 const App = () => {
 
@@ -62,7 +63,8 @@ const App = () => {
       </header>
       <main className='min-h-screen w-full font-code dot-grid-bg py-15'>
         <div className='max-w-360 w-full flex flex-col items-center gap-4 mx-auto'>
-          <SearchAutoComplete 
+          <AutoComplete />
+          {/*<SearchAutoComplete 
             searchFunction={userSearch}
             getLabel={(user) => user.login}
             search={search}
@@ -71,7 +73,7 @@ const App = () => {
             users={users}
             setUsers={setUsers}
             hasTyped={hasTyped} setHasTyped = {setHasTyped}
-          />
+          />*/}
             {resultLoading ? (
               <LoadingResult />
             ) : resultDisplay ? (
