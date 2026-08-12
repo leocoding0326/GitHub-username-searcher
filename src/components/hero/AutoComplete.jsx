@@ -5,7 +5,7 @@ import userSearch from "@/api/userSearch";
 import { CircleX } from "lucide-react";
 import { LoaderCircle } from "lucide-react";
 
-const AutoComplete = () => {
+const AutoComplete = ({value, onChange}) => {
 
 const [users, setUsers] = useState([]);
 const [open, setOpen] = useState(false);
@@ -14,9 +14,9 @@ const [hasTyped, setHasTyped] = useState(false);
 
 const debouncedSearch = useMemo(
     () => 
-        debounce(async (value) => {
+        debounce(async (searchTerm) => {
             try {
-                const results = await userSearch(value);
+                const results = await userSearch(searchTerm);
                 setUsers(results)
             }
             catch(error) {
@@ -42,8 +42,10 @@ console.log(users)
     return (
         <Combobox.Root 
             items={users}
-            itemToStringValue={(user) => user.login}
             itemToStringLabel={(user) => user.login}
+            value={value ? { login: value } : null}
+            isItemEqualToValue={(item, val) => item.login === val.login}
+            onValueChange={(user) => onChange(user ? user.login : "")}
             onOpenChange={setOpen}
             open={open}
             >
@@ -51,8 +53,9 @@ console.log(users)
 
             <Combobox.Input placeholder="Enter the username..."
             onChange={(event) => {
-                const value = event.target.value;
-                if(!value) {
+                const inputValue = event.target.value;
+                onChange(inputValue)
+                if(!inputValue) {
                     debouncedSearch.cancel();
                     setOpen(false)
                     setIsLoading(false)
@@ -60,13 +63,13 @@ console.log(users)
                     return
                 }
                 setOpen(true);
-                debouncedSearch(value);
+                debouncedSearch(inputValue);
                 setIsLoading(true);
                 setHasTyped(true);
             }}
             />
             {isLoading ? <LoaderCircle className="animate-spin"/> : 
-            <Combobox.Clear>
+            <Combobox.Clear onClick={()=>onChange(null)}>
                 <CircleX />
             </Combobox.Clear>
             }

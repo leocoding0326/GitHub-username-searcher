@@ -18,10 +18,7 @@ const SearchForm = ({onSubmit}) => {
     });
 
     const {
-        register,
         handleSubmit,
-        value,
-        onChange,
         reset,
         watch,
         control,
@@ -40,7 +37,7 @@ const SearchForm = ({onSubmit}) => {
 
                 <Controller 
                     control={control}
-                    name="input"
+                    name="username"
                     render={({field}) => (
                             <AutoComplete onChange={field.onChange} value={field.value}/>
                         )
