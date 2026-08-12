@@ -9,7 +9,8 @@ const AutoComplete = () => {
 
 const [users, setUsers] = useState([]);
 const [open, setOpen] = useState(false);
-const [isLoading, setIsLoading] = useState(false)
+const [isLoading, setIsLoading] = useState(false);
+const [hasTyped, setHasTyped] = useState(false);
 
 const debouncedSearch = useMemo(
     () => 
@@ -55,10 +56,13 @@ console.log(users)
                     debouncedSearch.cancel();
                     setOpen(false)
                     setIsLoading(false)
+                    setHasTyped(false)
                     return
                 }
-                debouncedSearch(value)
-                setIsLoading(true)
+                setOpen(true);
+                debouncedSearch(value);
+                setIsLoading(true);
+                setHasTyped(true);
             }}
             />
             {isLoading ? <LoaderCircle className="animate-spin"/> : 
@@ -70,6 +74,12 @@ console.log(users)
             <Combobox.Portal>
                 <Combobox.Positioner>
                     <Combobox.Popup>
+                        <Combobox.Status>
+                            {isLoading && "Searching..."}
+                        </Combobox.Status>
+                        <Combobox.Empty>
+                            {isLoading ? null : (!hasTyped ? 'Start Typing...' : 'User not found..')}
+                        </Combobox.Empty>
                     <Combobox.List>
                         {(user) => (
                         <Combobox.Item value={user} key={user.id}>
