@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import userSearch from './api/userSearch.js';
 import SearchAutoComplete from './components/hero/SearchAutoComplete.jsx';
 import userResult from './api/userResult.js';
 import userRepos from './api/userRepos.js';
@@ -8,7 +7,7 @@ import Discover from './components/Discover/Discover.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import Results from './components/Results/Results.jsx';
 import LoadingResult from './components/LoadingResult.jsx';
-import AutoComplete from './components/hero/AutoComplete.jsx';
+import SearchForm from './components/hero/SearchForm.jsx';
 
 const App = () => {
 
@@ -63,7 +62,8 @@ const App = () => {
       </header>
       <main className='min-h-screen w-full font-code dot-grid-bg py-15'>
         <div className='max-w-360 w-full flex flex-col items-center gap-4 mx-auto'>
-          <AutoComplete />
+
+        <SearchForm />
           {/*<SearchAutoComplete 
             searchFunction={userSearch}
             getLabel={(user) => user.login}
