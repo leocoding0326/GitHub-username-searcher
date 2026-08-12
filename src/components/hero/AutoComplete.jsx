@@ -3,10 +3,13 @@ import { useState, useMemo, useEffect } from "react";
 import debounce from "lodash.debounce";
 import userSearch from "@/api/userSearch";
 import { CircleX } from "lucide-react";
+import { LoaderCircle } from "lucide-react";
 
 const AutoComplete = () => {
 
 const [users, setUsers] = useState([]);
+const [open, setOpen] = useState(false);
+const [isLoading, setIsLoading] = useState(false)
 
 const debouncedSearch = useMemo(
     () => 
@@ -18,6 +21,9 @@ const debouncedSearch = useMemo(
             catch(error) {
                 console.log(`Something went wrong ${error}`)
             }
+            finally {
+                setIsLoading(false)
+            }
         }, 600),
         [userSearch]
 );
@@ -28,13 +34,18 @@ useEffect(() => {
     };
 }, [debouncedSearch]);
 
+console.log(isLoading)
 
 console.log(users)
 
     return (
         <Combobox.Root 
             items={users}
-            itemToStringValue={(user) => user.login}>
+            itemToStringValue={(user) => user.login}
+            itemToStringLabel={(user) => user.login}
+            onOpenChange={setOpen}
+            open={open}
+            >
             <Combobox.InputGroup>
 
             <Combobox.Input placeholder="Enter the username..."
@@ -42,13 +53,20 @@ console.log(users)
                 const value = event.target.value;
                 if(!value) {
                     debouncedSearch.cancel();
+                    setOpen(false)
+                    setIsLoading(false)
                     return
                 }
                 debouncedSearch(value)
+                setIsLoading(true)
             }}
             />
+            {isLoading ? <LoaderCircle className="animate-spin"/> : 
+            <Combobox.Clear>
+                <CircleX />
+            </Combobox.Clear>
+            }
             </Combobox.InputGroup>
-
             <Combobox.Portal>
                 <Combobox.Positioner>
                     <Combobox.Popup>
