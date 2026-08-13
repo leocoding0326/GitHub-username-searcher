@@ -48,8 +48,9 @@ console.log(users)
             onValueChange={(user) => onChange(user ? user.login : "")}
             onOpenChange={setOpen}
             open={open}
+            className="w-full min-[375px]:flex-1"
             >
-            <Combobox.InputGroup className={'flex items-center flex-1'}>
+            <Combobox.InputGroup className={'flex items-center flex-1  w-full min-[375px]:flex-1'}>
 
                 <Combobox.Input placeholder="Enter the username..."
                 onChange={(event) => {
@@ -69,7 +70,7 @@ console.log(users)
                 }}
                 className={'border border-digital-blue-100 p-2 rounded-md bg-slate-50 italic relative focus:outline-none focus:ring-1 focus:ring-digital-blue-200 focus:border-none shadow-md flex-1'}
               />
-                <span className="absolute right-35 flex">
+                <span className="absolute min-[375px]:right-30 right-4 flex">
                     {isLoading ? <LoaderCircle size={20} className="animate-spin text-gray-400 transition-all"/> : 
                     <Combobox.Clear onClick={()=>onChange(null)} >
                         <CircleX size={20} className="text-gray-500 hover:text-gray-700 cursor-pointer"/>

@@ -59,7 +59,7 @@ const App = () => {
       </header>
       <main className='min-h-screen w-full font-code dot-grid-bg py-15'>
         <div className='max-w-360 w-full flex flex-col items-center gap-4 mx-auto'>
-        <div className='w-full flex flex-col items-center justify-center py-20 gap-20 px-4'>
+        <div className='w-full flex flex-col items-center justify-center py-10 gap-10 px-4'>
           <HeroTitle />
           <SearchForm onSubmit={handleOnSearch}/>
         </div>
