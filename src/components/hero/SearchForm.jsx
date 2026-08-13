@@ -28,9 +28,9 @@ const SearchForm = ({onSubmit}) => {
 
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className="relative flex flex-col gap-1 p-2 justify-center">
+        <form onSubmit={handleSubmit(onSubmit)} className="relative flex flex-col gap-1 p-2 justify-center w-full items-center">
 
-            <div className="flex w-full gap-2 items-center">
+            <div className="flex w-full gap-2 items-center justify-center">
 
                 <Controller 
                     control={control}

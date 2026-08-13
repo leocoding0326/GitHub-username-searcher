@@ -49,7 +49,7 @@ console.log(users)
             onOpenChange={setOpen}
             open={open}
             >
-            <Combobox.InputGroup className={'flex items-center'}>
+            <Combobox.InputGroup className={'flex items-center w-[80%]'}>
 
                 <Combobox.Input placeholder="Enter the username..."
                 onChange={(event) => {
@@ -67,7 +67,7 @@ console.log(users)
                     setIsLoading(true);
                     setHasTyped(true);
                 }}
-                className={'border border-digital-blue-100 p-2 rounded-md bg-slate-50 italic relative focus:outline-none focus:ring-1 focus:ring-digital-blue-200 focus:border-none shadow-md'}
+                className={'border border-digital-blue-100 p-2 rounded-md bg-slate-50 italic relative focus:outline-none focus:ring-1 focus:ring-digital-blue-200 focus:border-none shadow-md flex-1'}
               />
                 <span className="absolute right-32 flex">
                     {isLoading ? <LoaderCircle size={20} className="animate-spin text-gray-400 transition-all"/> : 
