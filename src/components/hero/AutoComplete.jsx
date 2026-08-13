@@ -5,7 +5,7 @@ import userSearch from "@/api/userSearch";
 import { CircleX } from "lucide-react";
 import { LoaderCircle } from "lucide-react";
 
-const AutoComplete = ({value, onChange}) => {
+const AutoComplete = ({value, onChange, error}) => {
 
 const [users, setUsers] = useState([]);
 const [open, setOpen] = useState(false);
@@ -68,7 +68,7 @@ console.log(users)
                     setIsLoading(true);
                     setHasTyped(true);
                 }}
-                className={'border border-digital-blue-100 p-2 rounded-md bg-slate-50 italic relative focus:outline-none focus:ring-1 focus:ring-digital-blue-200 focus:border-none shadow-md flex-1'}
+                className={`border p-2 rounded-md bg-slate-50 italic relative focus:outline-none focus:ring-1 focus:ring-digital-blue-200 focus:border-none shadow-md flex-1 ${error ? 'ring-1 ring-red-500 focus:ring-red-500' : 'border border-digital-blue-100'}`}
               />
                 <span className="absolute min-[375px]:right-30 right-4 flex">
                     {isLoading ? <LoaderCircle size={20} className="animate-spin text-gray-400 transition-all"/> : 
@@ -79,7 +79,7 @@ console.log(users)
                 </span>
             </Combobox.InputGroup>
             <Combobox.Portal>
-                <Combobox.Positioner className="w-[var(--anchor-width)]">
+                <Combobox.Positioner className="w-(--anchor-width)">
                     <Combobox.Popup className='bg-slate-50 border border-digital-blue-100 rounded-b-md mt-1 p-2'>
                         <Combobox.Status className='text-gray-400'>
                             {isLoading && "Searching..."}
@@ -89,7 +89,7 @@ console.log(users)
                         </Combobox.Empty>
                     <Combobox.List>
                         {(user) => (
-                        <Combobox.Item value={user} key={user.id} className='p-2 hover:bg-digital-blue-50 cursor-pointer'>
+                        <Combobox.Item value={user} key={user.id} className='p-2 data-highlighted:bg-digital-blue-50 cursor-pointer'>
                             {user.login}
                         </Combobox.Item>
                         )}

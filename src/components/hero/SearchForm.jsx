@@ -36,17 +36,12 @@ const SearchForm = ({onSubmit}) => {
                     control={control}
                     name="username"
                     render={({field}) => (
-                            <AutoComplete onChange={field.onChange} value={field.value}/>
+                            <AutoComplete onChange={field.onChange} value={field.value} error={errors.username}/>
                         )
                     }>
                 </Controller>
 
-                   {/* <input type="text" 
-                    {...register('username')}
-                    className={`border ${errors.username ? 'border-red-500' : 'border-gray-300'} rounded-md px-2 py-1 focus:outline-digital-blue-200 focus:outline-1 w-full bg-slate-50 flex-1`}
-                    />*/}
-
-                    <SearchButton isSubmitting={isSubmitting}/>
+                    <SearchButton isSubmitting={isSubmitting} />
             </div>
              {!errors.username 
                     ? <Tip /> 
