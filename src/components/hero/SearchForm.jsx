@@ -28,9 +28,9 @@ const SearchForm = ({onSubmit}) => {
 
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className="relative flex flex-col gap-1 p-2 justify-center w-full items-center">
+        <form onSubmit={handleSubmit(onSubmit)} className="relative flex flex-col gap-1 px-4 justify-center w-full items-start">
 
-            <div className="flex w-full gap-2 items-center justify-center">
+            <div className="flex gap-2 items-center w-full">
 
                 <Controller 
                     control={control}
@@ -48,8 +48,7 @@ const SearchForm = ({onSubmit}) => {
 
                     <SearchButton isSubmitting={isSubmitting}/>
             </div>
-
-                {!errors.username 
+             {!errors.username 
                     ? <Tip /> 
                     : <div className="text-red-500 text-xs flex gap-1 items-center"><TriangleAlert size={13}/>{errors.username.message}</div>}
         </form>
