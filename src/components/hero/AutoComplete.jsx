@@ -79,9 +79,9 @@ console.log(users)
                 </span>
             </Combobox.InputGroup>
             <Combobox.Portal>
-                <Combobox.Positioner>
-                    <Combobox.Popup>
-                        <Combobox.Status>
+                <Combobox.Positioner className="w-[var(--anchor-width)]">
+                    <Combobox.Popup className='bg-slate-50 border border-digital-blue-100 rounded-b-md mt-1 p-2'>
+                        <Combobox.Status className='text-gray-400'>
                             {isLoading && "Searching..."}
                         </Combobox.Status>
                         <Combobox.Empty>
@@ -89,7 +89,7 @@ console.log(users)
                         </Combobox.Empty>
                     <Combobox.List>
                         {(user) => (
-                        <Combobox.Item value={user} key={user.id}>
+                        <Combobox.Item value={user} key={user.id} className='p-2 hover:bg-digital-blue-50 cursor-pointer'>
                             {user.login}
                         </Combobox.Item>
                         )}
