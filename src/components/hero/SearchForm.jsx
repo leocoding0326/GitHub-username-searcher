@@ -2,7 +2,6 @@ import { useForm, Controller } from "react-hook-form";
 import {TriangleAlert} from "lucide-react";
 import {z} from 'zod';
 import { zodResolver } from "@hookform/resolvers/zod";
-import ClearButton from "./ClearButton";
 import SearchButton from "./SearchButton";
 import Tip from "./Tip";
 import AutoComplete from "./AutoComplete";
@@ -50,8 +49,6 @@ const SearchForm = ({onSubmit}) => {
                     />*/}
 
                     <SearchButton isSubmitting={isSubmitting}/>
-
-                    {watch('username') && <ClearButton onClear = {() => reset()}/>}
             </div>
 
                 {!errors.username 

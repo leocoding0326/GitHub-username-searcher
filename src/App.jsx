@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react';
-import SearchAutoComplete from './components/hero/SearchAutoComplete.jsx';
+import { useState } from 'react';
 import userResult from './api/userResult.js';
 import userRepos from './api/userRepos.js';
 import NavBar from './components/NavBar/NavBar.jsx';
@@ -14,7 +13,6 @@ const App = () => {
   const [resultDisplay, setResultsDisplay] = useState(false);//Checks if results is dislpayed
   const [resultLoading, setResultLoading] = useState(false)
   const [userNotFound, setuserNotFound] = useState(false);
-  const [hasTyped, setHasTyped] = useState(false)
   const [search, setSearch] = useState('');//Search bar values
   const [resultObject, setResultObject] = useState(null);//Return Result Object
   const [reposObject, setReposObject] = useState(null)
@@ -40,13 +38,11 @@ const App = () => {
       setReposObject(userReposData);
       setResultsDisplay(true);
       setUsers([]);
-      setHasTyped(false);
       setuserNotFound(false)
     }
     catch(err) {
       console.log(err)
       setuserNotFound(true);
-      setHasTyped(false);
       setResultsDisplay(false)
     }
     finally {
@@ -64,16 +60,6 @@ const App = () => {
         <div className='max-w-360 w-full flex flex-col items-center gap-4 mx-auto'>
 
         <SearchForm onSubmit={handleOnSearch}/>
-          {/*<SearchAutoComplete 
-            searchFunction={userSearch}
-            getLabel={(user) => user.login}
-            search={search}
-            setSearch={setSearch}
-            onSubmit = {handleOnSearch}
-            users={users}
-            setUsers={setUsers}
-            hasTyped={hasTyped} setHasTyped = {setHasTyped}
-          />*/}
             {resultLoading ? (
               <LoadingResult />
             ) : resultDisplay ? (

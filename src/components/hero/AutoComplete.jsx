@@ -49,30 +49,33 @@ console.log(users)
             onOpenChange={setOpen}
             open={open}
             >
-            <Combobox.InputGroup>
+            <Combobox.InputGroup className={'flex items-center'}>
 
-            <Combobox.Input placeholder="Enter the username..."
-            onChange={(event) => {
-                const inputValue = event.target.value;
-                onChange(inputValue)
-                if(!inputValue) {
-                    debouncedSearch.cancel();
-                    setOpen(false)
-                    setIsLoading(false)
-                    setHasTyped(false)
-                    return
-                }
-                setOpen(true);
-                debouncedSearch(inputValue);
-                setIsLoading(true);
-                setHasTyped(true);
-            }}
-            />
-            {isLoading ? <LoaderCircle className="animate-spin"/> : 
-            <Combobox.Clear onClick={()=>onChange(null)}>
-                <CircleX />
-            </Combobox.Clear>
-            }
+                <Combobox.Input placeholder="Enter the username..."
+                onChange={(event) => {
+                    const inputValue = event.target.value;
+                    onChange(inputValue)
+                    if(!inputValue) {
+                        debouncedSearch.cancel();
+                        setOpen(false)
+                        setIsLoading(false)
+                        setHasTyped(false)
+                        return
+                    }
+                    setOpen(true);
+                    debouncedSearch(inputValue);
+                    setIsLoading(true);
+                    setHasTyped(true);
+                }}
+                className={'border border-digital-blue-100 p-2 rounded-md bg-slate-50 italic relative focus:outline-none focus:ring-1 focus:ring-digital-blue-200 focus:border-none shadow-md'}
+              />
+                <span className="absolute right-32 flex">
+                    {isLoading ? <LoaderCircle className="animate-spin"/> : 
+                    <Combobox.Clear onClick={()=>onChange(null)} >
+                        <CircleX />
+                    </Combobox.Clear>
+                    }
+                </span>
             </Combobox.InputGroup>
             <Combobox.Portal>
                 <Combobox.Positioner>
