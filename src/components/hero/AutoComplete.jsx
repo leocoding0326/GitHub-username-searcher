@@ -69,10 +69,10 @@ console.log(users)
                 }}
                 className={'border border-digital-blue-100 p-2 rounded-md bg-slate-50 italic relative focus:outline-none focus:ring-1 focus:ring-digital-blue-200 focus:border-none shadow-md'}
               />
-                <span className="absolute right-32 flex">
-                    {isLoading ? <LoaderCircle className="animate-spin"/> : 
+                <span className="absolute right-32 flex transition-all">
+                    {isLoading ? <LoaderCircle size={20} className="animate-spin text-gray-400"/> : 
                     <Combobox.Clear onClick={()=>onChange(null)} >
-                        <CircleX />
+                        <CircleX size={20} className="text-gray-600"/>
                     </Combobox.Clear>
                     }
                 </span>
