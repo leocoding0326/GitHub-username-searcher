@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer.jsx';
 import Results from './components/Results/Results.jsx';
 import LoadingResult from './components/LoadingResult.jsx';
 import SearchForm from './components/hero/SearchForm.jsx';
+import HeroTitle from './components/hero/HeroTitle.jsx';
 
 const App = () => {
 

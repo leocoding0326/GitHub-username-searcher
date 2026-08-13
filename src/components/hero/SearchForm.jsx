@@ -18,8 +18,6 @@ const SearchForm = ({onSubmit}) => {
 
     const {
         handleSubmit,
-        reset,
-        watch,
         control,
         formState: {errors, isSubmitting}
     } = useForm({
