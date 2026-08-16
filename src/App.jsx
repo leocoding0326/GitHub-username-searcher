@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import userResult from './api/userResult.js';
-import userRepos from './api/userRepos.js';
+import userResult from './API/userResult.js';
+import userRepos from './API/userRepos.js';
 import NavBar from './components/NavBar/NavBar.jsx';
 import Discover from './components/Discover/Discover.jsx';
 import Footer from './components/Footer/Footer.jsx';

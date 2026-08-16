@@ -1,7 +1,7 @@
 import { Combobox } from "@base-ui/react";
 import { useState, useMemo, useEffect } from "react";
 import debounce from "lodash.debounce";
-import userSearch from "@/api/userSearch";
+import userSearch from "@/API/userSearch";
 import { CircleX } from "lucide-react";
 import { LoaderCircle } from "lucide-react";
 
