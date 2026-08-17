@@ -21,7 +21,7 @@ const RenderRepos = ({object}) => {
                 }))}
             </div>
             {visibleCount < object.length && (
-                <div className='flex items-center justify-between'>
+                <div className='flex items-center justify-between py-4'>
                     <span className='h-px bg-gray-200 flex-1'></span>
                         <button className='px-6 text-sm italic text-gray-400 underline hover:text-black hover:cursor-pointer'
                         onClick={() => setVisibleCount((prev) => prev + 5)}>
