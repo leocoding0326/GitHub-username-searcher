@@ -3,7 +3,7 @@ import LoadingResultAnimation from "./assets/loadingResultAnimation.lottie?url"
 
 const LoadingResult = () => {
     return (
-        <div className="h-50">
+        <div>
             <DotLottieReact src={LoadingResultAnimation} loop autoplay />
         </div>
     )
