@@ -1,7 +1,6 @@
 import ReposMenu from "./ReposMenu";
 import { useState } from "react";
 import RenderRepos from "./RenderRepos";
-import UserBio from "./UserBio";
 import OverviewTab from "./OverviewTab";
 
 
