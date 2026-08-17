@@ -34,7 +34,7 @@ const UserStats = ({followers, following, repos, gists, org}) => {
                 <FontAwesomeIcon icon={faBuilding} className="text-green-400 text-2xl pb-2"/>
                 <div>
                 <p className="font-bold text-xl">{org || 'N/A'}</p>
-                <p className="text-gray-400 text-sm">Organizations</p>
+                <p className="text-gray-400 text-sm">Company</p>
                 </div>
             </div>
             
