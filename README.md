@@ -64,3 +64,4 @@ This project's main goal was strengthening React hooks fundamentals:
 ![Search screenshot](./screenshot/searchBarScreenshot.png)
 ![Results screenshot](./screenshot/resultScreenShot.png)
 ![Repos screenshot](./screenshot/reposScreenShot.png)
+![UserNotFund screenshot](./screenshot/userNotFund.png)
