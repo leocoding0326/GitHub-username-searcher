@@ -61,7 +61,3 @@ This project's main goal was strengthening React hooks fundamentals:
 ## Screenshots
 
 ![App screenshot](./screenshot/screenshotDemo.png)
-
-## License
-
-Not yet decided — MIT is a common, permissive default for a project like this if you want to add one.

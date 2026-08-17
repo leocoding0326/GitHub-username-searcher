@@ -14,17 +14,8 @@ const App = () => {
   const [resultDisplay, setResultsDisplay] = useState(false);//Checks if results is dislpayed
   const [resultLoading, setResultLoading] = useState(false)
   const [userNotFound, setuserNotFound] = useState(false);
-  const [search, setSearch] = useState('');//Search bar values
   const [resultObject, setResultObject] = useState(null);//Return Result Object
   const [reposObject, setReposObject] = useState(null)
-  const [users, setUsers] = useState([]);// Controls arrays of suggestions
-  const [popularUsers, setPopularUsers] = useState([
-  "torvalds",
-  "gaearon",
-  "yyx990803",
-  "sindresorhus",
-  "tj",
-]); //Mocks a small database to use in popular searches
 
   const handleOnSearch = async ({username}) => {
 
@@ -38,7 +29,6 @@ const App = () => {
       setResultObject(userData);
       setReposObject(userReposData);
       setResultsDisplay(true);
-      setUsers([]);
       setuserNotFound(false)
     }
     catch(err) {
@@ -68,7 +58,7 @@ const App = () => {
             ) : resultDisplay ? (
               < Results resultObject={resultObject} reposObject={reposObject}/>
             ) : (
-              <Discover popularArray={popularUsers} setSearch={setSearch} setUsers={setUsers} userNotFound={userNotFound}/>
+              <Discover userNotFound={userNotFound}/>
             )
             }
         </div>
