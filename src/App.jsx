@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import userResult from './API/userResult.js';
 import userRepos from './API/userRepos.js';
 import NavBar from './components/NavBar/NavBar.jsx';
@@ -6,8 +7,9 @@ import Discover from './components/Discover/Discover.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import Results from './components/Results/Results.jsx';
 import LoadingResult from './components/LoadingResult.jsx';
-import SearchForm from './components/hero/SearchForm.jsx';
-import HeroTitle from './components/hero/HeroTitle.jsx';
+import Hero from './components/hero/Hero.jsx';
+
+
 
 const App = () => {
 
@@ -16,6 +18,8 @@ const App = () => {
   const [userNotFound, setuserNotFound] = useState(false);
   const [resultObject, setResultObject] = useState(null);//Return Result Object
   const [reposObject, setReposObject] = useState(null)
+
+
 
   const handleOnSearch = async ({username}) => {
 
@@ -49,10 +53,7 @@ const App = () => {
       </header>
       <main className='min-h-screen w-full font-code dot-grid-bg py-15'>
         <div className='max-w-360 w-full flex flex-col items-center gap-4 mx-auto'>
-        <div className='w-full flex flex-col items-center justify-center py-25 gap-15 px-4'>
-          <HeroTitle />
-          <SearchForm onSubmit={handleOnSearch}/>
-        </div>
+        <Hero handleOnSearch={handleOnSearch}/>
             {resultLoading ? (
               <LoadingResult />
             ) : resultDisplay ? (
