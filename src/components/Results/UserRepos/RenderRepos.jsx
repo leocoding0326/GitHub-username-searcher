@@ -19,7 +19,8 @@ const RenderRepos = ({object}) => {
                 forks={repo.forks} 
                 language={repo.language} 
                 stars={repo.stargazers_count} 
-                visibility={repo.visibility}/>
+                visibility={repo.visibility}
+                url={repo.html_url}/>
                 }))}
             </div>
             }
