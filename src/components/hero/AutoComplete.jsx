@@ -80,7 +80,7 @@ console.log(users)
             </Combobox.InputGroup>
             <Combobox.Portal>
                 <Combobox.Positioner className="w-(--anchor-width)">
-                    <Combobox.Popup className='bg-slate-50 border border-digital-blue-100 rounded-b-md mt-1 p-2'>
+                    <Combobox.Popup className='bg-slate-50 border border-digital-blue-100 rounded-b-md mt-1 p-2 z-2000'>
                         <Combobox.Status className='text-gray-400'>
                             {isLoading && "Searching..."}
                         </Combobox.Status>
