@@ -1,5 +1,9 @@
+import AboutHero from "./AboutHero/AboutHero";
+
 const About = () => {
-    return <h1>About</h1>
+    return (
+        <div><AboutHero/></div>
+    );
 };
 
 export default About;
