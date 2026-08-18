@@ -1,5 +1,5 @@
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
-import LoadingResultAnimation from "./assets/loadingResultAnimation.lottie?url"
+import LoadingResultAnimation from "../../../../assets/loadingResultAnimation.lottie?url"
 
 const LoadingResult = () => {
     return (

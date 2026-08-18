@@ -1,5 +1,4 @@
-import noBio from '../../../assets/noBio.svg';
-
+import noBio from '../../../../../assets/noBio.svg'
 const EmptyBio = () => {
     return (
         <div className=" p-6 flex flex-col justify-center items-center m-auto gap-6">

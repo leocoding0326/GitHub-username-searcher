@@ -1,7 +1,8 @@
+import DiscoverText from "./DiscoverTexts.jsx";
 import SearchImage from "./SearchImage";
-import DiscoverText from "./DiscoverTexts";
-import discoverImg from "../../assets/DiscoverImg.svg";
-import notFoundImg from "../../assets/notFoundImg.svg"
+import discoverImg from "../../../../assets/DiscoverImg.svg";
+import notFoundImg from "../../../../assets/notFoundImg.svg";
+
 
 const Discover = ({userNotFound}) => {
     return (
