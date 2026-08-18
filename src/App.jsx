@@ -1,25 +1,20 @@
 
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import NavBar from './components/NavBar/NavBar.jsx';
-import Footer from './components/Footer/Footer.jsx';
-import Home from './components/routes/Home/Home.jsx'
+import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom';
+import Layout from './Layout';
 
 
 
 const App = () => {
 
-  return (
-    <div>
-      <header>
-        <NavBar />
-      </header>
-      <main className='min-h-screen w-full font-code dot-grid-bg py-15'>
-        <Home />
-      </main>
-      
-      <Footer />
-    </div>
-  );
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='/' element={<Layout/>}>
+
+    </Route>
+  )
+);
+
+  return <RouterProvider router={router} />
 } 
 
 export default App;
