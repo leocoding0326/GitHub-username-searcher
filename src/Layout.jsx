@@ -3,7 +3,8 @@ import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 
 const Layout = () => {
-    <div>
+   return(
+     <div>
       <header>
         <NavBar />
       </header>
@@ -12,6 +13,7 @@ const Layout = () => {
       </main>
       <Footer />
     </div>
-}
+   );
+};
 
 export default Layout;
