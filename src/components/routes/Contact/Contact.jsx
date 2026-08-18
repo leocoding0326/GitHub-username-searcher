@@ -1,5 +1,5 @@
-const About = () => {
+const Contact = () => {
     
-}
+};
 
-export default About
+export default Contact;
