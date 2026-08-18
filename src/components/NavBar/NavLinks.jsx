@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 const NavLinks = () => {
     return (
         <ul className="flex md:flex-row flex-col md:gap-3 gap-10 items-center
@@ -9,12 +11,13 @@ const NavLinks = () => {
         [&>li>a]:transition-colors
         [&>li>a]:duration-500
         [&>li>a]:inline-block
+        [&>li>a.active]:bg-digital-blue-400
         md:text-sm text-2xl
         ">
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Features</a></li>
-            <li><a href="">Contact</a></li>
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/about">About</NavLink></li>
+            <li><NavLink to="/features">Features</NavLink></li>
+            <li><NavLink to="/contact">Contact</NavLink></li>
         </ul>
     );
 };
