@@ -1,7 +1,12 @@
+import heroImg from '../../../../assets/aboutHeroGif.gif'
+import { CodeXml } from 'lucide-react';
+
 const AboutHero = () => {
     return (
-        <section className='p-4 text-center h-80 flex items-center justify-center'>
-            <h2 className='text-3xl font-bold max-w-[80%] leading-relaxed'>Discover GitHub profiles and repositories in seconds.<br/>Search, explore, and learn about developers and their work.</h2>
+        <section className='text-center md:h-[40vh] h-[30vh] flex flex-col gap-2 items-center justify-center p-4'>
+            <h2 className='md:text-3xl text-md font-bold leading-relaxed'>Search, explore, and learn about developers and their work.</h2>
+
+            <img src={heroImg} className='shadow-md rounded-md h-auto max-w-[80%] border border-digital-blue-100'/>
         </section>
     )
 }
