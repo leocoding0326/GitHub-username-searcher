@@ -3,7 +3,7 @@ import { faLightbulb } from "@fortawesome/free-solid-svg-icons"
 
 const Tip = () => {
     return (
-    <p className="text-xs text-start mt-2"> 
+    <p className="text-xs text-start mt-2 text-white"> 
         <FontAwesomeIcon icon={faLightbulb} style={{color: "rgb(255, 212, 59)",}}/>   
         Tip: Try typing <span className="text-digital-blue-600">"octocat", "torvalds"</span>
     </p>

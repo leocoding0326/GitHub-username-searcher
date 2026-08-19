@@ -19,7 +19,7 @@ const UserRepos = ({reposObject, resultObject}) => {
     };
 
     return (
-        <div className="p-4 border border-digital-blue-100 shadow-sm rounded-md bg-slate-50">
+        <div className="p-4 border border-digital-blue-800 shadow-sm rounded-md bg-linear-to-b from-digital-blue-950 to-digital-blue-900">
             <ReposMenu chooseTab = {handleNavChoice} current = {navChoice}/>
             {navChoice==='overview' && <OverviewTab resultObject={resultObject} object={overviewRepos}/>}
             {navChoice==='repositories' && <RenderRepos object={reposObject}/>}

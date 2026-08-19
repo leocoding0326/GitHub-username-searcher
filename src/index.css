@@ -30,27 +30,26 @@
   .dot-grid-bg {
     position: relative;
     isolation: isolate;
-    background: radial-gradient(ellipse at 50% 50%,rgba(255, 255, 255, 1) 0%, #E5F0FF 100%)
+    background-color: #000E24;
+    overflow: hidden;
   }
 
   .dot-grid-bg::before {
     content: "";
     position: absolute;
-    inset: 0;
-    background-image: radial-gradient(circle, #99C2FF 0.96px, transparent 0.96px);
-    background-size: 12px 12px;
-
-    mask-image: radial-gradient(
-      ellipse at center,
-      transparent 40%,
-      rgba(0, 0, 0, 0.6) 100%
-    );
-    -webkit-mask-image: radial-gradient(
-      ellipse at center,
-      transparent 40%,
-      rgba(0, 0, 0, 0.6) 100%
-    );
-
+    inset: -100%;
+    transform: rotate(25deg);
+    transform-origin: center;
+    background-color: #000E24;
+    opacity: 0.8;
+    background-image: radial-gradient(#002966 1px, #000E24 1px);
+    background-size: 10px 10px;
+    mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 75%);
+    -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 75%);
+    mask-size: 100% 100%;
+    -webkit-mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
     pointer-events: none;
     z-index: -1;
   }
@@ -58,7 +57,7 @@
 
 @layer components {
   .tabs {
-    @apply flex border-b border-gray-300;
+    @apply flex border-b border-digital-blue-800;
   }
 
   .tab-link {
@@ -120,7 +119,7 @@
 }
 
 :root {
---background:oklch(1 0 0);
+--background:#000E24;
 --foreground:oklch(0.145 0 0);
 --card:oklch(1 0 0);
 --card-foreground:oklch(0.145 0 0);
