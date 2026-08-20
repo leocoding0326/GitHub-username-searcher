@@ -1,4 +1,5 @@
 import heroImg from '../../../../assets/aboutHeroGif.gif';
+import FeaturesCards from './FeaturesCards';
 
 const AboutHero = () => {
     return (
@@ -6,9 +7,11 @@ const AboutHero = () => {
             <div className='flex flex-col gap-4'>
                 <h2 className='text-3xl font-bold leading-relaxed text-white'>Find any Github user in<span className='text-digital-blue-500'> seconds.</span></h2>
                 <p className='text-white line-clamp-3'>Github Finder is a fast and beautiful tool that lets you search for any GitHub username and inntantly explore their profile, repositories, stats and more...</p>
+                <FeaturesCards />
             </div>
             <img src={heroImg} className='shadow-md rounded-md h-auto md:max-w-[80%]
             wide-full border border-digital-blue-100 mx-auto'/>
+            
         </section>
     )
 }
