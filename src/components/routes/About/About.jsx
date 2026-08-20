@@ -1,5 +1,5 @@
 import AboutHero from "./AboutHero/AboutHero";
-import AboutCards from "./AboutHero/AboutCards";
+import AboutCards from "./AboutHero/HowItWorks";
 
 const About = () => {
     return (
